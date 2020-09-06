@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* all-round-gothic [Book_400] [Demi_600] */
+@import url("https://use.typekit.net/acj2oaw.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+
+:root {
+	--greenMain: #6DC497;
+	--greenLight: #B1CEBF;
+	--greenDark: #274535;
+	--blueMain: #46C8F5;
+	--blueLight: #91DDF7;
+	--blueDark: #226075;
+	--purpleMain: #663695;
+	--purpleLight: #BA94E0;
+	--purpleDark: #422361;
+	--violetMain: #CB3694;
+	--violetLight: #D579B3;
+	--violetDark: #4D1538;
+	--grey: #808080;
+	--light: #FFFFFF;
+	--dark: #000000;
+	--transition: all 0.3s ease 0s;
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	min-height: 100%;
+	min-width: 100%;
+	overflow: auto;
+}
+
+body {
+	/*background: linear-gradient(45deg, var(--greenLight), var(--blueLight));*/
+	background: url(https://images.unsplash.com/photo-1542272201-b1ca555f8505);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+p, a, button {
+	text-decoration: none;
+}
+
+a, button, .logoMenu {
+	cursor: pointer;
+}
+
+body {
+	height: 100%;
+	display: grid;
+	grid-template-columns: minmax(10px, 1fr) repeat(9, minmax(24px, 105px)) minmax(10px, 1fr);
+	grid-column-gap: 10px;
+}
+
+nav {
+	display: flex;
+	grid-column: 1 / span 11;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	height: 100px;
+	display: grid;
+	grid-template-columns: minmax(10px, 1fr) repeat(9, minmax(24px, 105px)) minmax(10px, 1fr);
+	grid-column-gap: 10px;
+	align-items: center;
+	background: linear-gradient(45deg, rgba(203, 54, 148, .77), rgba(102, 54, 149, .77));
+	backdrop-filter: blur(10px);
+	filter: drop-shadow(0px 0px 4px var(--dark));
+}
+
+menu {
+	display: flex;
+	grid-column: 2 / span 9;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.linksMenu {
+	font-family: "all-round-gothic", sans-serif;
+	font-size: 1.375rem;
+	font-weight: 600;
+	margin-left: 14px;
+}
+
+.linksMenu a {
+	margin-right: 14px;
+	color: var(--light);
+}
+
+.linksMenu :hover {
+	color: var(--dark)
+}
+
+.logoMenu {
+	width: 68px;
+	margin-right: 14px;
+}
+
+main {
+	display: flex;
+	grid-column: 1 / span 11;
+	width: 100%;
+	margin-top: 100px;
+	display: grid;
+	grid-template-columns: minmax(10px, 1fr) repeat(9, minmax(24px, 105px)) minmax(10px, 1fr);
+	grid-column-gap: 10px;
+	background: url(https://images.unsplash.com/photo-1598775764807-f8ea9b3b3966);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.box {
+	grid-column: 2 / span 9;
+	justify-content: space-evenly;
+	width: 400px;
+	height: 1500px;
+	color: var(--violetMain);
+}
