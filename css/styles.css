@@ -117,7 +117,7 @@ menu {
 	margin-right: 14px;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 940px){
 	.linksMenu svg {
 		width: 28px;
 		height: 28px;
