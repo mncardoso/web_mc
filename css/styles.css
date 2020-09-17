@@ -83,7 +83,7 @@ menu {
 }
 
 .linksMenu button {
-	margin-left: 14px;
+	margin-left: 28px;
 	height: 50px;
 	background: none;
 	align-self: center;
@@ -111,8 +111,8 @@ menu {
 
 .logoMenu {
 	width: 68px;
-	margin-left: 14px;
-	margin-right: 14px;
+	margin-left: 28px;
+	margin-right: 28px;
 }
 
 @media screen and (max-width: 940px){
@@ -122,6 +122,9 @@ menu {
 		margin-right: 0px;
 	}
 	.menuLegend {display: none;}
+	/*.logoMenu {
+		width: 44px;
+	}*/
 }
 
 main {
@@ -130,7 +133,7 @@ main {
 	width: 100%;
 	margin-top: 100px;
 	display: grid;
-	grid-template-columns: minmax(10px, 1fr) repeat(9, minmax(24px, 105px)) minmax(10px, 1fr);
+	grid-template-columns: minmax(18px, 1fr) repeat(9, minmax(24px, 105px)) minmax(18px, 1fr);
 	grid-column-gap: 10px;
 }
 
