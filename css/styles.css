@@ -78,12 +78,14 @@ nav {
 menu {
 	display: flex;
 	width: 100%;
+	margin-left: 14px;
+	margin-right: 14px;
 	align-items: center;
 	justify-content: space-between;
 }
 
 .linksMenu button {
-	margin-left: 28px;
+	margin-left: 14px;
 	height: 50px;
 	background: none;
 	align-self: center;
@@ -111,20 +113,20 @@ menu {
 
 .logoMenu {
 	width: 68px;
-	margin-left: 28px;
-	margin-right: 28px;
+	margin-left: 14px;
+	margin-right: 14px;
 }
 
-@media screen and (max-width: 940px){
+@media screen and (max-width: 1024px){
 	.linksMenu svg {
 		width: 28px;
 		height: 28px;
 		margin-right: 0px;
 	}
 	.menuLegend {display: none;}
-	/*.logoMenu {
+	.logoMenu {
 		width: 44px;
-	}*/
+	}
 }
 
 main {
