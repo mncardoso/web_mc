@@ -97,6 +97,11 @@ menu {
 	color: var(--aqua);
 }
 
+.linksMenu button:active {
+	fill: var(--aqua);
+	color: var(--aqua);
+}
+
 .logoMenu {
 	width: 68px;
 	margin-left: 14px;
