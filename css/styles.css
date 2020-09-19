@@ -51,9 +51,11 @@ body {
 	height: 100%;
 }
 
+/*Top Menu*/
 nav {
 	display: flex;
 	position: fixed;
+	z-index: 999;
 	width: 100%;
 	top: 0;
 	height: 100px;
@@ -132,6 +134,7 @@ menu {
 	}
 }
 
+/*Body*/
 main {
 	display: flex;
 	width: 100%;
@@ -175,4 +178,45 @@ main {
 
 @media screen and (max-width: 956px) {
 	.wellcom {grid-template-columns: 0fr 5fr 0fr;}
+}
+
+.work {
+	display: flex;
+	grid-column: 2 / span 1;
+}
+
+.workGalery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+	grid-column-gap: 14px;
+	grid-row-gap: 14px;
+}
+
+.work img{
+	width: 100%;
+	filter: drop-shadow(0 2px 10px var(--dark));
+}
+
+@media screen and (max-width: 600px){
+	.workGalery {grid-template-columns: repeat(2, minmax(128px, 1fr));}
+}
+
+/*Footer*/
+footer {
+	display: grid;
+	grid-template-columns: minmax(18px, 1fr) minmax(315px, 1025px) minmax(18px, 1fr);
+	grid-column-gap: 10px;
+}
+
+.footerText {
+	display: flex;
+	width: 100%;
+	grid-column: 2;
+	justify-content: flex-end;
+	margin-top: 14px;
+	margin-bottom: 14px;
+	font-family: "all-round-gothic", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	color: var(--light);
 }
