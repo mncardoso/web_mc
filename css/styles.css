@@ -184,6 +184,10 @@ main {
 	.wellcom {grid-template-columns: 0fr 5fr 0fr;}
 }
 
+@media screen and (max-height: 450px){
+	main {margin-top: 50px;}
+}
+
 .spacer {
 	display: flex;
 	grid-column: 2;
