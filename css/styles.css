@@ -95,12 +95,7 @@ menu {
 	margin-right: 7px;
 }
 
-.linksMenu button:hover {
-	fill: var(--aqua);
-	color: var(--aqua);
-}
-
-.linksMenu button:active {
+.linksMenu button:hover , .linksMenu button:active , .linksMenu button:focus {
 	fill: var(--aqua);
 	color: var(--aqua);
 }
@@ -131,6 +126,15 @@ menu {
 		width: 1rem;
 		height: 1rem;
 		margin-right: 0px;
+	}
+}
+
+@media screen and (max-height: 450px){
+	nav {
+		height: 50px;
+	}
+	.logoMenu {
+		width: 44px;
 	}
 }
 
@@ -202,8 +206,8 @@ main {
 .work img{
 	width: 100%;
 	filter: drop-shadow(-5px -5px 0px var(--purpleDark));
-	transition: all 0.2s;
-	transition-delay: 300ms;
+	transition: all 0.5s;
+	transition-delay: 330ms;
 }
 
 .work img:hover , .work img:active , .work img:focus {
