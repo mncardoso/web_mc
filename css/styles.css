@@ -73,7 +73,7 @@ menu {
 	justify-content: space-between;
 }
 
-.linksMenu button {
+.linksMenu a {
 	margin-left: 14px;
 	height: 50px;
 	background: none;
@@ -95,7 +95,7 @@ menu {
 	margin-right: 7px;
 }
 
-.linksMenu button:hover , .linksMenu button:active , .linksMenu button:focus {
+.linksMenu a:hover , .linksMenu a:active , .linksMenu a:focus {
 	fill: var(--aqua);
 	color: var(--aqua);
 }
