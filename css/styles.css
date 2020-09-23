@@ -213,6 +213,10 @@ main {
 	/*filter: drop-shadow(-5px -5px 0px var(--light));*/
 }
 
+@media screen and (max-width: 956px){
+	.titleText {font-size: 1.5rem;}
+}
+
 .work {
 	display: flex;
 	grid-column: 2 / span 1;
