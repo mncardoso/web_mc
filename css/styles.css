@@ -195,6 +195,24 @@ main {
 	height: 28px;
 }
 
+.title {
+	display: flex;
+	grid-column: 2;
+	width: 100%;
+	height: 150px;
+	align-items: center;
+}
+
+.titleText {
+	display: flex;
+	justify-content: left;
+	font-family: "all-round-gothic", sans-serif;
+	font-size: 2.5rem;
+	font-weight: 600;
+	color: var(--light);
+	/*filter: drop-shadow(-5px -5px 0px var(--light));*/
+}
+
 .work {
 	display: flex;
 	grid-column: 2 / span 1;
