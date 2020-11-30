@@ -253,7 +253,8 @@ main {
 
 .work img {
   width: 100%;
-  filter: drop-shadow(-5px -5px 0px var(--purpleDark));
+}
+/*  filter: drop-shadow(-5px -5px 0px var(--purpleDark));
   transition: all 0.5s;
   transition-delay: 330ms;
 }
@@ -269,7 +270,7 @@ main {
   .workGalery {
     grid-template-columns: repeat(2, 1fr);
   }
-}
+}*/
 
 /*Footer*/
 footer {
