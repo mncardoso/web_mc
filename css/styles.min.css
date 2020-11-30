@@ -297,7 +297,7 @@ main {
     -webkit-box-flex: 50%;
     -ms-flex: 50%;
     flex: 50%;
-    max-width: 50%;
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 600px) {

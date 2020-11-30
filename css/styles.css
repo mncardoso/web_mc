@@ -278,7 +278,7 @@ main {
 @media screen and (max-width: 800px) {
   .photoColumn {
     flex: 50%;
-    max-width: 50%;
+    max-width: 100%;
   }
 }
 
