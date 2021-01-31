@@ -124,6 +124,7 @@ logo {
 
 logo img {
   width: 124px;
+  margin-left: 20px;
 }
 
 explorer {
@@ -683,4 +684,33 @@ exponentialtxt {
 
   a {
   }
+}
+
+/*footer*/
+
+footer {
+  grid-column: 2;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-top: var(--margin);
+  margin-bottom: var(--margin);
+}
+
+.social {
+  display: block;
+  width: 50px;
+  text-decoration: none;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: none;
+  background: none;
+  margin: 0px;
+  margin-right: 10px;
+}
+
+.social img {
+  width: 50px;
 }
