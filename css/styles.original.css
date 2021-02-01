@@ -699,7 +699,7 @@ footer {
 
 .social {
   display: block;
-  width: 50px;
+  width: 100px;
   text-decoration: none;
   height: auto;
   display: flex;
@@ -708,9 +708,9 @@ footer {
   color: none;
   background: none;
   margin: 0px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .social img {
-  width: 50px;
+  width: 100px;
 }

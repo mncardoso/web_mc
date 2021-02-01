@@ -905,7 +905,7 @@ footer {
 }
 .social {
   display: block;
-  width: 50px;
+  width: 100px;
   text-decoration: none;
   height: auto;
   display: -webkit-box;
@@ -920,8 +920,8 @@ footer {
   color: none;
   background: 0 0;
   margin: 0;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 .social img {
-  width: 50px;
+  width: 100px;
 }
