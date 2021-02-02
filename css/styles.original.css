@@ -111,7 +111,7 @@ introcont {
   margin-top: var(--margin);
   margin-bottom: var(--margin);
   display: flex;
-  grid-template-columns: repear(auto) auto;
+  grid-template-columns: repeat(minmax(300px, 1fr));
 }
 
 name {
@@ -150,9 +150,6 @@ iphone {
   width: 250px;
   align-self: start;
   margin-right: 20px;
-}
-
-explorertxt {
 }
 
 .iPhoneFrame {
@@ -214,9 +211,6 @@ exponentialcont {
 exponentialcont img {
   width: 375px;
   height: 100%;
-}
-
-exponentialtxt {
 }
 
 /*explorer css*/
@@ -672,17 +666,52 @@ exponentialtxt {
   }
 }
 
-@media screen and (max-width: 675px) {
-  h1 {
+@media screen and (max-width: 850px) {
+  explorercont {
+    flex-direction: column;
+  }
+  iphone {
+    margin-top: 40px;
+    align-self: flex-end;
   }
 
-  h2 {
+  rusticcont {
+    flex-direction: column;
   }
 
-  p {
+  rusticcont img {
+    margin-top: 40px;
+    align-self: center;
   }
 
-  a {
+  exponentialcont {
+    flex-direction: column;
+  }
+
+  exponentialcont img {
+    margin-top: 40px;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  iphone {
+    flex-direction: column;
+    align-self: center;
+  }
+
+  .tryit {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+
+  iPhone iframe {
+    position: absolute;
+    margin-top: 192px;
+    margin-left: 15px;
+    width: 258px;
+    height: 558px;
+    border-radius: 27px;
   }
 }
 

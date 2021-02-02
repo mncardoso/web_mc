@@ -110,8 +110,8 @@ introcont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-grid-columns: repear(auto) auto;
-  grid-template-columns: repear(auto) auto;
+  -ms-grid-columns: () [minmax(300px, 1fr) ];
+  grid-template-columns: repeat(minmax(300px, 1fr));
 }
 name {
   -ms-grid-column: 1;
@@ -888,6 +888,66 @@ exponentialcont img {
   a {
     color: var(--night);
     background: var(--day);
+  }
+}
+@media screen and (max-width: 850px) {
+  explorercont {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  iphone {
+    margin-top: 40px;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
+  rusticcont {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  rusticcont img {
+    margin-top: 40px;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+  }
+  exponentialcont {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  exponentialcont img {
+    margin-top: 40px;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+  }
+}
+@media screen and (max-width: 590px) {
+  iphone {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+  }
+  .tryit {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  iPhone iframe {
+    position: absolute;
+    margin-top: 192px;
+    margin-left: 15px;
+    width: 258px;
+    height: 558px;
+    border-radius: 27px;
   }
 }
 footer {
