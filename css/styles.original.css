@@ -4,11 +4,20 @@
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap");
 
 :root {
-  --grey: #808080;
-  --day: #ffffff;
-  --night: #1a1a1a;
-  --margin: 150px;
-  /*Font Size*/
+  font-size: 16px;
+  /*Color Styles*/
+  --day: #e5e5e5;
+  --night: #191919;
+  --dayGradient: linear-gradient(0deg, #d9d8fd 0%, #46c8f5 100%);
+  --nightGradient: linear-gradient(0deg, #030227 0%, #402cc2 100%);
+  /*Effect Styles*/
+  --socialFilter: drop-shadow(0px 0px 0px rgba(170, 170, 190, 0.75));
+  --socialBackdrop: blur(20px);
+  /*Settings*/
+  --margin: 32px;
+  --pading: 60px;
+  --social: 106px;
+  /*Font Weight*/
   --thin: 100;
   --light: 300;
   --regular: 400;
@@ -16,12 +25,6 @@
   --bold: 700;
   --extra-bold: 800;
   --black: 900;
-  /*filter*/
-  --shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
-    drop-shadow(120px 120px 120px rgba(0, 0, 0, 0.16))
-    drop-shadow(80px 80px 80px rgba(0, 0, 0, 0.16))
-    drop-shadow(48px 48px 48px rgba(0, 0, 0, 0.24))
-    drop-shadow(16px 16px 16px rgba(0, 0, 0, 0.24));
 }
 
 * {
@@ -36,16 +39,12 @@ html {
 
 html,
 body {
-  background: var(--day) none repeat scroll 0% 0%;
+  background: white none repeat scroll 0% 0%;
   color: var(--night);
 }
 
 body {
-  display: grid;
-  grid-template-columns: minmax(16px, 1fr) minmax(256px, 1024px) minmax(
-      16px,
-      1fr
-    );
+  display: box;
 }
 
 span,
@@ -85,74 +84,105 @@ a {
   font-weight: var(--extra-bold);
   text-decoration: none;
   margin: none;
-  width: 128px;
-  height: 32px;
-  display: flex;
-  align-items: center;
+}
+
+cont {
+  display: grid;
+  padding: var(--margin);
+  grid-template-columns: 442px 442px minmax(var(--margin), 427px);
+  grid-template-rows: auto;
+  grid-gap: var(--margin) var(--margin);
   justify-content: center;
-  border-radius: 10px;
-  color: var(--day);
-  background: var(--night);
-  margin-top: 50px;
+}
+
+gradient {
+  grid-column: 3;
+  grid-row: 1 / span 8;
+  align-self: stretch;
+  display: flex;
+  background: var(--dayGradient);
 }
 
 .homebutton {
   grid-column: 2;
 }
 
-intro {
-  grid-column: 2;
+box {
+  grid-column: 1 / span 2;
   display: grid;
   width: 100%;
-  align-items: center;
+  position: relative;
+  background-color: var(--day);
+  padding: var(--pading);
 }
 
-introcont {
-  margin-top: var(--margin);
-  margin-bottom: var(--margin);
-  display: flex;
-  grid-template-columns: repeat(minmax(300px, 1fr));
-}
-
-name {
+.left {
   grid-column: 1;
 }
 
-logo {
+.right {
   grid-column: 2;
+}
+
+boxFooter {
+  grid-column: 1 / span 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--social));
+  grid-template-rows: repeat(auto-fill, var(--social));
+  grid-gap: var(--margin) var(--margin);
+  width: 100%;
+  position: relative;
+  background-color: var(--day);
+  padding: var(--pading);
+}
+
+txt {
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+txtTitle {
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 2;
+}
+
+logo {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-end;
+  align-content: flex-start;
 }
 
 logo img {
   width: 124px;
-  margin-left: 20px;
-}
-
-explorer {
-  grid-column: 2;
-  display: grid;
-  width: 100%;
-  align-items: center;
-}
-
-explorercont {
-  display: flex;
-  width: 100%;
-  margin-top: var(--margin);
-  margin-bottom: var(--margin);
-  justify-content: space-between;
+  height: 124px;
 }
 
 iphone {
+  grid-column: 1;
+  grid-row: 1;
   display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-end;
+  align-content: flex-start;
 }
 
 .tryit {
   width: 250px;
-  align-self: start;
-  margin-right: 20px;
+  align-self: flex-start;
+  margin-top: 40px;
 }
 
 .iPhoneFrame {
+  position: relative;
   display: block;
   width: 286px;
   height: 587px;
@@ -163,54 +193,172 @@ iphone {
 
 iPhone iframe {
   position: absolute;
-  margin-top: 14px;
-  margin-left: 284px;
+  right: calc(var(--pading) + 14px);
+  top: calc(var(--pading) + 14px);
   width: 258px;
   height: 558px;
   border-radius: 27px;
+  z-index: 3;
 }
 
 rustic {
-  grid-column: 2;
-  display: grid;
-  width: 100%;
-  align-items: center;
-}
-
-rusticcont {
+  grid-column: 1;
+  grid-row: 1;
   display: flex;
   width: 100%;
-  margin-top: var(--margin);
-  margin-bottom: var(--margin);
-  justify-content: space-between;
-}
-
-rustictxt {
-}
-
-rusticcont img {
-  width: 375px;
   height: 100%;
+  justify-content: flex-end;
+  align-content: flex-start;
+}
+
+rustic img {
+  width: 382px;
+  height: 434px;
 }
 
 exponential {
-  grid-column: 2;
-  display: grid;
-  width: 100%;
-  align-items: center;
-}
-
-exponentialcont {
+  grid-column: 1;
+  grid-row: 1;
   display: flex;
   width: 100%;
-  margin-top: var(--margin);
-  margin-bottom: var(--margin);
-  justify-content: space-between;
+  height: 100%;
+  justify-content: flex-end;
+  align-content: flex-start;
 }
 
-exponentialcont img {
-  width: 375px;
+exponential img {
+  width: 382px;
+  height: 89px;
+}
+
+appleWatch {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  width: 100%;
   height: 100%;
+  justify-content: flex-end;
+  align-content: flex-start;
+}
+
+appleWatch img {
+  width: 180px;
+  height: 225px;
+}
+
+faceFilter {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-end;
+  align-content: flex-start;
+}
+
+faceFilter img {
+  width: 225px;
+  height: 225px;
+}
+
+innerShell {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  width: 100%;
+  height: 215px;
+  justify-content: flex-end;
+  align-content: flex-start;
+}
+
+innerShell a {
+  position: absolute;
+  right: calc(var(--pading) + 161px);
+  bottom: calc(var(--pading) + 71px);
+  z-index: 3;
+}
+
+innerShell img {
+  width: 382px;
+  height: 100%;
+}
+
+blissPopint {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  width: 100%;
+  height: calc(var(--pading) * 2);
+  justify-content: flex-end;
+  align-content: flex-start;
+}
+
+blissPopint svg {
+  width: 100%;
+  height: 64.21px;
+}
+
+risingSun {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-end;
+  align-content: flex-start;
+}
+
+risingSun img {
+  width: 225px;
+  height: 225px;
+}
+
+.button {
+  width: 149px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: var(--day);
+  background: var(--night);
+  margin-top: var(--margin);
+}
+
+.left .button,
+.right .button {
+  position: absolute;
+  bottom: var(--pading);
+}
+
+.social {
+  margin-right: var(--margin);
+  filter: var(--socialFilter);
+  backdrop-filter: var(--socialBackdrop);
+}
+
+.social img {
+  width: var(--social);
+  height: var(--social);
+}
+
+/*jhygasdf*/
+
+cont2 {
+  display: grid;
+  padding: var(--margin);
+  grid-template-columns: minmax(var(--margin), 1375px);
+  grid-gap: var(--margin) var(--margin);
+  justify-content: center;
+}
+
+box2 {
+  grid-column: 1;
+  display: block;
+  width: 100%;
+  position: relative;
+  background-color: var(--day);
+  padding: var(--pading);
 }
 
 /*explorer css*/
@@ -436,7 +584,6 @@ exponentialcont img {
 .expFeedback {
   grid-column: 2;
   margin-top: 64px;
-  margin-bottom: 64px;
 }
 .expFeedbackCont {
   margin-top: 16px;
@@ -656,90 +803,129 @@ exponentialcont img {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: var(--night) none repeat scroll 0% 0%;
+    background: black none repeat scroll 0% 0%;
     color: var(--day);
   }
 
-  a {
+  .button {
     color: var(--night);
     background: var(--day);
   }
-}
 
-@media screen and (max-width: 850px) {
-  explorercont {
-    flex-direction: column;
-  }
-  iphone {
-    margin-top: 40px;
-    align-self: flex-end;
+  box {
+    background-color: var(--night);
   }
 
-  rusticcont {
-    flex-direction: column;
+  box2 {
+    background-color: var(--night);
   }
 
-  rusticcont img {
-    margin-top: 40px;
-    align-self: center;
+  boxFooter {
+    background-color: var(--night);
   }
 
-  exponentialcont {
-    flex-direction: column;
+  gradient {
+    background: var(--nightGradient);
   }
 
-  exponentialcont img {
-    margin-top: 40px;
-    align-self: center;
+  blissPopint svg {
+    fill: white;
   }
 }
 
-@media screen and (max-width: 590px) {
-  iphone {
-    flex-direction: column;
-    align-self: center;
+@media screen and (max-width: 1045px) {
+  cont {
+    grid-template-columns: minmax(var(--margin), 1fr) minmax(var(--margin), 1fr);
+  }
+
+  gradient {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .left,
+  .right {
+    grid-column: 1 / span 2;
+  }
+
+  .explorerTxt p {
+    margin-top: 770px;
   }
 
   .tryit {
-    margin-right: 0px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+  }
+
+  iphone {
+    display: grid;
+    justify-content: center;
   }
 
   iPhone iframe {
-    position: absolute;
-    margin-top: 192px;
-    margin-left: 15px;
-    width: 258px;
-    height: 558px;
-    border-radius: 27px;
+    right: calc(var(--pading) + 50% - 190px);
+    top: calc(var(--pading) + 221px);
   }
 }
 
-/*footer*/
+@media screen and (max-width: 566px) {
+  h1 {
+    font-size: 2rem;
+  }
 
-footer {
-  grid-column: 2;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  margin-top: var(--margin);
-  margin-bottom: var(--margin);
-}
+  h2 {
+    font-size: 1.875rem;
+  }
 
-.social {
-  display: block;
-  width: 100px;
-  text-decoration: none;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: none;
-  background: none;
-  margin: 0px;
-  margin-right: 20px;
-}
+  p {
+    font-size: 1rem;
+  }
 
-.social img {
-  width: 100px;
+  rustic img {
+    width: 100%;
+    height: 100%;
+  }
+
+  exponential {
+    align-content: center;
+  }
+
+  exponential img {
+    width: 100%;
+    height: 100%;
+  }
+
+  appleWatch img {
+    width: 100%;
+    height: 100%;
+  }
+
+  faceFilter img {
+    width: 100%;
+    height: 100%;
+  }
+
+  innerShell {
+    width: 100%;
+    height: 100%;
+  }
+
+  innerShell img {
+    width: 100%;
+    height: 100%;
+  }
+
+  blissPopint svg {
+    width: 100%;
+    height: var(--pading);
+  }
+
+  risingSun img {
+    width: 100%;
+    height: 100%;
+  }
 }
