@@ -895,7 +895,7 @@ box2 img {
 }
 
 @media screen and (max-width: 566px) {
-  cont {
+  html {
     zoom: 0.85;
   }
 
