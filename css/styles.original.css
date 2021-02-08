@@ -818,6 +818,18 @@ box2 img {
   height: 100%;
 }
 
+/*404*/
+
+.page404 {
+  justify-self: center;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.emoji {
+  font-size: 8rem;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background: black none repeat scroll 0% 0%;
