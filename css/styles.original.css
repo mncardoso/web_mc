@@ -104,7 +104,7 @@ gradient {
 }
 
 .homebutton {
-  grid-column: 2;
+  grid-column: 1;
 }
 
 box {
@@ -380,23 +380,23 @@ box2 img {
 
 /*explorer css*/
 .expTitle {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 .expBriefing {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 .expChallenge {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 .expFeatures {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 .expPostIt {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 .featuresPostItTitle {
@@ -457,7 +457,7 @@ box2 img {
   margin: 4px;
 }
 .researchQuestions {
-  grid-column: 2;
+  grid-column: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -495,7 +495,7 @@ box2 img {
   position: relative;
 }
 .expMoodBoard {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 .expMoodBoard img {
@@ -503,7 +503,7 @@ box2 img {
   margin-top: 16px;
 }
 .expColours {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -587,7 +587,7 @@ box2 img {
 }
 
 .expDesign {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 .expDesign img {
@@ -595,11 +595,11 @@ box2 img {
   width: 100%;
 }
 .expConclusion {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 .expFeedback {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 .expFeedbackCont {
@@ -622,23 +622,23 @@ box2 img {
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 .expFeedbackComs {
-  grid-column: 2;
+  grid-column: 1;
   align-self: end;
 }
 
 /*Casa Rustica css*/
 
 .crTitle {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 .crBriefing {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 
 .crLogo {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -663,7 +663,7 @@ box2 img {
   width: 100%;
 }
 .crProcess {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 .crProcess img {
@@ -674,7 +674,7 @@ box2 img {
   border-radius: 10px;
 }
 .crStationary {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 .crStationary img {
@@ -682,7 +682,7 @@ box2 img {
   margin-top: 16px;
 }
 .crPictures {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 .crPicturesImg {
@@ -698,7 +698,7 @@ box2 img {
   width: 100%;
 }
 .crOnline {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 .crOnlineCnt {
@@ -714,11 +714,11 @@ box2 img {
   width: 100%;
 }
 .crResult {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 .crComment {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
   margin-bottom: 64px;
 }
@@ -726,16 +726,16 @@ box2 img {
 /*exponential-e css*/
 
 .expoTitle {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 
 .expoVideosTitle {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 .expoVideosCnt {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 16px;
   width: 100%;
   display: grid;
@@ -745,11 +745,11 @@ box2 img {
   align-items: center;
 }
 .expoMotionTitle {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 .expoMotionCnt {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 16px;
   margin-bottom: 64px;
   width: 100%;
@@ -760,11 +760,11 @@ box2 img {
   align-items: center;
 }
 .expoPrintTitle {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 .expoPrintCnt {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 16px;
   margin-bottom: 64px;
   width: 100%;
@@ -778,11 +778,11 @@ box2 img {
   width: 100%;
 }
 .expoSocialTitle {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 64px;
 }
 .expoSocialCnt {
-  grid-column: 2;
+  grid-column: 1;
   margin-top: 16px;
   margin-bottom: 64px;
   width: 100%;
