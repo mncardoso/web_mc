@@ -392,6 +392,22 @@ risingSun img {
   background: var(--night);
   margin-top: var(--margin);
 }
+.buttonHome {
+  width: 149px;
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: var(--day);
+  background: var(--night);
+}
 .left .button,
 .right .button {
   position: absolute;
@@ -422,11 +438,18 @@ cont2 {
 box2 {
   -ms-grid-column: 1;
   grid-column: 1;
-  display: block;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
+  grid-gap: var(--margin) var(--margin);
   width: 100%;
   position: relative;
   background-color: var(--day);
   padding: var(--pading);
+}
+box2 img {
+  width: 100%;
 }
 .expTitle {
   -ms-grid-column: 2;
@@ -1086,6 +1109,10 @@ box2 {
     color: var(--day);
   }
   .button {
+    color: var(--night);
+    background: var(--day);
+  }
+  .buttonHome {
     color: var(--night);
     background: var(--day);
   }

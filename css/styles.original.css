@@ -325,6 +325,17 @@ risingSun img {
   margin-top: var(--margin);
 }
 
+.buttonHome {
+  width: 149px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: var(--day);
+  background: var(--night);
+}
+
 .left .button,
 .right .button {
   position: absolute;
@@ -354,11 +365,17 @@ cont2 {
 
 box2 {
   grid-column: 1;
-  display: block;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: var(--margin) var(--margin);
   width: 100%;
   position: relative;
   background-color: var(--day);
   padding: var(--pading);
+}
+
+box2 img {
+  width: 100%;
 }
 
 /*explorer css*/
@@ -808,6 +825,11 @@ box2 {
   }
 
   .button {
+    color: var(--night);
+    background: var(--day);
+  }
+
+  .buttonHome {
     color: var(--night);
     background: var(--day);
   }
