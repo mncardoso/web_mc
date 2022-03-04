@@ -13,7 +13,7 @@ let canvas;
 
 function setup() {
 	canvas = createCanvas(window.innerWidth, window.innerHeight, WEBGL);
-	canvas.parent("backdrop");
+	canvas.parent("background");
 	angleMode(DEGREES);
 	colorMode(HSL);
 	cols = w / scl;
@@ -23,7 +23,15 @@ function setup() {
 }
 
 function draw() {
-	background(0);
+	if (
+		window.matchMedia &&
+		window.matchMedia("(prefers-color-scheme: dark)").matches
+	) {
+		background(0, 0, 10, 1);
+	} else {
+		background(0, 0, 90, 1);
+	}
+
 	flying -= 0.02;
 	let yoff = 0;
 	for (let x = 0; x < cols; x++) {
@@ -44,9 +52,19 @@ function draw() {
 		beginShape(TRIANGLE_STRIP);
 		for (let x = 0; x < cols; x++) {
 			smooth();
-			fill(242, 90, map(x, 0, cols, 0, 8));
-			stroke(195, 90, map(x, 0, cols, 0, 62));
-			strokeWeight(0.5);
+			if (
+				window.matchMedia &&
+				window.matchMedia("(prefers-color-scheme: dark)").matches
+			) {
+				fill(0, 0, 10, 1);
+				stroke(0, 0, 90, 1);
+				// stroke(195, 90, map(x, 0, cols, 0, 62));
+			} else {
+				fill(0, 0, 90, 1);
+				stroke(0, 0, 10, 1);
+				// stroke(195, 90, map(x, 0, cols, 0, 62));
+			}
+			strokeWeight(0.75);
 			vertex(x * scl, y * scl, terrain[x][y]);
 			vertex(x * scl, (y + 1) * scl, terrain[x][y + 1]);
 		}

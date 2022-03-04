@@ -4,14 +4,14 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<title>[404] - Miguel Cardoso</title>
-		<meta property="og:title" content="[404] - Miguel Cardoso" />
-		<meta name="apple-mobile-web-app-title" content="[404] - Miguel Cardoso" />
-		<meta name="application-name" content="[404] - Miguel Cardoso" />
+		<title>games - Miguel Cardoso</title>
+		<meta property="og:title" content="games - Miguel Cardoso" />
+		<meta name="apple-mobile-web-app-title" content="games - Miguel Cardoso" />
+		<meta name="application-name" content="games - Miguel Cardoso" />
 
-		<meta name="description" content="404 missing page" />
-		<meta property="og:description" content="404 missing page" />
-		<meta name="twitter:card" content="404 missing page" />
+		<meta name="description" content="Migurl Cardoso - Solving problems with code and design" />
+		<meta property="og:description" content="Migurl Cardoso - Solving problems with code and design" />
+		<meta name="twitter:card" content="Migurl Cardoso - Solving problems with code and design" />
 
 		<meta property="og:type" content="portfolio website" />
 		<meta property="og:url" content="https://miguel-cardoso.com" />
@@ -274,13 +274,57 @@
 		</nav>
 		<main>
 			<article>
-				<h1>404</h1>
+				<h1>Games</h1>
 				<p>
-					☠️ Sorry, but it appears that i that page you are looking for doesn't
-					exist. ☠️
+					Just a little fun project to test interactivity in the browser. The Magic Answers requires you to finish the question with the correct punctuation, there are 20 possible answers. And Rock, Paper, Scissors uses emojis and a random number to decide the computer choice. If you open the console you can see the game in text form.
 				</p>
+				<div>
+					
+					</div>
+				</div>
 			</article>
-			<aside></aside>
+			<aside><div id="magic_game">
+				<h3>Magic Answers (usualy in a ball)</h3>
+				<div id="question">
+					<input
+						type="text"
+						id="magic_question"
+						name="question"
+						placeholder="What hour you wish to know?"
+						required
+					/>
+					<div id="button_div">
+						<button class="ask">Ask</button>
+					</div>
+				</div>
+				<div id="magic_answer"><p>Please ask a question</p></div>
+				<div>
+					<script src="./js/magic_answers.js"></script>
+				</div>
+			</div>
+			<div id="rps_game">
+				<h3>Rock, Paper, Scissors</h3>
+				<div>
+					<div id="rps_board">
+						<div id="player">
+							<span>🕹️</span>
+							<span id="player_src">🙂</span>
+							<span id="player_play">✋</span>
+						</div>
+						<p>🆚</p>
+						<div id="computer">
+							<span id="computer_play">✋</span>
+							<span id="computer_src">🙂</span>
+							<samp>🤖</samp>
+						</div>
+					</div>
+					<div id="player_choice">
+						<button class="game_ctrl" id="rock">🪨</button>
+						<button class="game_ctrl" id="paper">🧻</button>
+						<button class="game_ctrl" id="scissors">✂️</button>
+					</div>
+					<script src="./js/rps.js"></script>
+				</div></aside>
 		</main>
 		<footer>
 			<span>

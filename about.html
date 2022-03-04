@@ -1,100 +1,336 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="robots" content="index,follow" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Miguel Cardoso</title>
-    <meta name="description" content="text" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./ico/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./ico/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="194x194"
-      href="./ico/favicon-194x194.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="./ico/android-chrome-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./ico/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./site.webmanifest" />
-    <link rel="mask-icon" href="./ico/safari-pinned-tab.svg" color="#6dc497" />
-    <meta name="apple-mobile-web-app-title" content="Miguel Cardoso" />
-    <meta
-      name="description"
-      content="A designer with 2 years of experience in design teams/agencies, and 5 years in problem solving and efficiency improvement. With an analytical eye for details, he always brought growth to his company/client. Very knowledgeable in tools like Photoshop, Illustrator and Figma (among others). An eager learner, he complements knowledge with his own experiences. He easily integrates any team, working remotely or in office."
-    />
-    <meta name="msapplication-TileColor" content="#663695" />
-    <meta name="msapplication-TileImage" content="./ico/mstile-144x144.png" />
-    <meta name="theme-color" content="#663695" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-XM46NGBCHJ"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+<html lang="EN">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      gtag("config", "G-XM46NGBCHJ");
-    </script>
-  </head>
-  <body>
-    <cont2>
-      <box2>
-        <a class="buttonHome" href="./index.html">home</a>
-        <div class="myInfo">
-          <p>
-            <img
-              src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/me.jpg"
-              alt=""
-            />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            Miguel Cardoso is a designer with a passion for interactivity and
-            discovery. With an analytical eye for details, he always brings
-            growth to his company/client. Miguel has a wide range of knowledge
-            within the tools used for visual design, video and audio production,
-            visual effects, 3D environments and interactivity. An eager learner,
-            he complements knowledge with his own experiences. He easily
-            integrates a team, working remotely or at the office. Having worked
-            in the hospitality industry helped him understand people’s needs and
-            how to manage a team, bringing out the best of each person. He also
-            loves keeping up with the latest technologies and finding out what
-            he can do with the new features. You will be able to communicate
-            with him in Portuguese, English and Spanish
-          </p>
-        </div>
-        <a class="buttonHome" href="mailto:m.n.cardoso@me.com">say hi</a>
-      </box2>
-    </cont2>
-  </body>
+		<title>about me - Miguel Cardoso</title>
+		<meta property="og:title" content="about me - Miguel Cardoso" />
+		<meta
+			name="apple-mobile-web-app-title"
+			content="about me - Miguel Cardoso"
+		/>
+		<meta name="application-name" content="about me - Miguel Cardoso" />
+
+		<meta
+			name="description"
+			content="Migurl Cardoso - Solving problems with code and design"
+		/>
+		<meta
+			property="og:description"
+			content="Migurl Cardoso - Solving problems with code and design"
+		/>
+		<meta
+			name="twitter:card"
+			content="Migurl Cardoso - Solving problems with code and design"
+		/>
+
+		<meta property="og:type" content="portfolio website" />
+		<meta property="og:url" content="https://miguel-cardoso.com" />
+		<meta name="twitter:creator" content="@mncardoso" />
+
+		<meta
+			property="og:image"
+			media="(prefers-color-scheme: light)"
+			content="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/og_light.png"
+		/>
+		<meta
+			property="og:image"
+			media="(prefers-color-scheme: dark)"
+			content="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/og_dark.png"
+		/>
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+		<link rel="manifest" href="/site.webmanifest" />
+
+		<link
+			rel="mask-icon"
+			media="(prefers-color-scheme: light)"
+			href="/safari-pinned-tab.svg"
+			color="#e6e6e6"
+		/>
+		<link
+			rel="mask-icon"
+			media="(prefers-color-scheme: dark)"
+			href="/safari-pinned-tab.svg"
+			color="#1a1a1a"
+		/>
+
+		<link rel="stylesheet" href="css/main.css" />
+
+		<script src="libraries/p5.min.js"></script>
+		<script src="libraries/p5.sound.min.js"></script>
+
+		<meta
+			name="theme-color"
+			media="(prefers-color-scheme: light)"
+			content="#e6e6e6"
+		/>
+		<meta
+			name="theme-color"
+			media="(prefers-color-scheme: dark)"
+			content="#1a1a1a"
+		/>
+	</head>
+
+	<body>
+		<nav>
+			<logo>
+				<svg
+					width="56"
+					height="56"
+					viewBox="0 0 514 514"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<style>
+						#bkg-full {
+							fill: #e6e6e6;
+							stroke: #1a1a1a;
+							visibility: visible;
+						}
+						#bkg-half {
+							fill: #e6e6e6;
+							stroke: #1a1a1a;
+							visibility: hidden;
+						}
+						#circle-full {
+							fill: #e6e6e6;
+							stroke: #1a1a1a;
+							visibility: visible;
+						}
+						#circle-half {
+							fill: #e6e6e6;
+							stroke: #1a1a1a;
+							visibility: hidden;
+						}
+						#clr-full {
+							visibility: visible;
+						}
+						#clr-half {
+							visibility: hidden;
+						}
+						#logo-full {
+							fill: #e6e6e6;
+							visibility: visible;
+						}
+						#logo-half {
+							fill: #e6e6e6;
+							visibility: hidden;
+						}
+						#logo:hover > #bkg-full {
+							visibility: hidden;
+						}
+						#logo:hover > #bkg-half {
+							visibility: visible;
+						}
+						#logo:hover > #circle-full {
+							visibility: hidden;
+						}
+						#logo:hover > #circle-half {
+							visibility: visible;
+						}
+						#logo:hover > #clr-full {
+							visibility: hidden;
+						}
+						#logo:hover > #clr-half {
+							visibility: visible;
+						}
+						#logo:hover > #logo-full {
+							visibility: hidden;
+						}
+						#logo:hover > #logo-half {
+							visibility: visible;
+						}
+						#logo:focus > #bkg-full {
+							visibility: hidden;
+						}
+						#logo:focus > #bkg-half {
+							visibility: visible;
+						}
+						#logo:focus > #circle-full {
+							visibility: hidden;
+						}
+						#logo:focus > #circle-half {
+							visibility: visible;
+						}
+						#logo:focus > #clr-full {
+							visibility: hidden;
+						}
+						#logo:focus > #clr-half {
+							visibility: visible;
+						}
+						#logo:focus > #logo-full {
+							visibility: hidden;
+						}
+						#logo:focus > #logo-half {
+							visibility: visible;
+						}
+						@media (prefers-color-scheme: dark) {
+							#bkg-full {
+								fill: #1a1a1a;
+								stroke: #e6e6e6;
+							}
+							#bkg-half {
+								fill: #1a1a1a;
+								stroke: #e6e6e6;
+							}
+							#circle-full {
+								fill: #1a1a1a;
+								stroke: #e6e6e6;
+							}
+							#circle-half {
+								fill: #1a1a1a;
+								stroke: #e6e6e6;
+							}
+							#logo-full {
+								fill: #1a1a1a;
+							}
+							#logo-half {
+								fill: #1a1a1a;
+							}
+						}
+					</style>
+					<a id="logo" href="https://miguel-cardoso.com" title="home">
+						<rect
+							id="bkg-full"
+							x="-67.562"
+							y="192.653"
+							width="368"
+							height="550"
+							rx="184"
+							transform="rotate(-45 -67.562 192.653)"
+							stroke-width="16"
+						/>
+						<rect
+							id="bkg-half"
+							x="-67.6863"
+							y="192.529"
+							width="368"
+							height="462"
+							rx="184"
+							transform="rotate(-45 -67.6863 192.529)"
+							stroke-width="16"
+						/>
+						<circle
+							id="circle-full"
+							cx="321"
+							cy="321"
+							r="184"
+							stroke-width="16"
+						/>
+						<circle
+							id="circle-half"
+							cx="259"
+							cy="259"
+							r="184"
+							stroke-width="16"
+						/>
+						<path
+							id="clr-full"
+							d="M321.046 480.854C409.339 480.854 480.915 409.283 480.915 320.996C480.915 232.709 409.339 161.138 321.046 161.138C232.753 161.138 161.177 232.709 161.177 320.996C161.177 409.283 232.753 480.854 321.046 480.854Z"
+							fill="url(#linearG)"
+						/>
+						<path
+							id="clr-half"
+							d="M259.046 418.854C347.339 418.854 418.915 347.283 418.915 258.996C418.915 170.709 347.339 99.1381 259.046 99.1381C170.753 99.1381 99.1774 170.709 99.1774 258.996C99.1774 347.283 170.753 418.854 259.046 418.854Z"
+							fill="url(#linearG)"
+						/>
+						<path
+							id="logo-full"
+							d=" M411.42 230.489C390.493 209.558 362.956 196.53 333.501 193.626C304.045 190.721 274.494 198.12 249.882 214.56C225.27 231.001 207.121 255.466 198.527 283.788C189.933 312.109 191.425 342.534 202.751 369.878C214.076 397.222 234.533 419.794 260.636 433.746C286.74 447.699 316.873 452.169 345.903 446.395C374.933 440.622 401.062 424.961 419.839 402.083C438.616 379.204 448.878 350.523 448.877 320.926C448.924 304.124 445.638 287.479 439.208 271.956C432.779 256.432 423.334 242.338 411.42 230.489V230.489ZM322.516 408.814C328.327 408.432 333.798 405.944 337.905 401.815C339.021 400.699 340.346 399.814 341.805 399.21C343.263 398.606 344.826 398.295 346.404 398.295C347.983 398.295 349.546 398.606 351.004 399.21C352.463 399.814 353.788 400.699 354.904 401.815C356.02 402.931 356.905 404.256 357.509 405.714C358.113 407.173 358.424 408.736 358.424 410.314C358.424 411.892 358.113 413.455 357.509 414.914C356.905 416.372 356.02 417.697 354.904 418.813V418.813C348.194 425.532 339.642 430.111 330.33 431.968C321.017 433.826 311.363 432.88 302.588 429.25C293.814 425.619 286.314 419.468 281.036 411.574C275.759 403.68 272.942 394.398 272.942 384.902C272.942 375.407 275.759 366.125 281.036 358.231C286.314 350.337 293.814 344.186 302.588 340.555C311.363 336.925 321.017 335.979 330.33 337.837C339.642 339.694 348.194 344.273 354.904 350.992C357.158 353.246 358.424 356.303 358.424 359.491C358.424 362.679 357.158 365.736 354.904 367.99C352.65 370.244 349.592 371.51 346.404 371.51C343.216 371.51 340.159 370.244 337.905 367.99V367.99C335.071 365.144 331.568 363.054 327.716 361.913C323.865 360.772 319.789 360.616 315.861 361.459C311.934 362.302 308.281 364.118 305.238 366.739C302.194 369.36 299.857 372.703 298.441 376.462C297.025 380.22 296.575 384.274 297.133 388.252C297.691 392.23 299.238 396.004 301.632 399.228C304.027 402.453 307.193 405.025 310.84 406.708C314.487 408.392 318.498 409.133 322.506 408.864L322.516 408.814ZM384.392 413.144C383.591 413.675 382.655 413.964 381.694 413.977C380.734 413.989 379.79 413.725 378.976 413.216C378.162 412.707 377.511 411.973 377.103 411.104C376.694 410.235 376.545 409.266 376.672 408.314L389.951 317.327C390.252 315.253 390.004 313.136 389.232 311.188C388.46 309.239 387.191 307.527 385.551 306.221C383.912 304.916 381.959 304.062 379.887 303.746C377.815 303.43 375.697 303.662 373.742 304.418L324.556 319.816C322.222 320.547 319.72 320.547 317.386 319.816L268.21 304.418C266.257 303.667 264.142 303.439 262.074 303.757C260.007 304.075 258.058 304.928 256.422 306.232C254.785 307.536 253.518 309.244 252.746 311.189C251.975 313.133 251.724 315.246 252.021 317.317L265.3 408.304C265.429 409.258 265.28 410.228 264.872 411.099C264.463 411.97 263.811 412.705 262.995 413.215C262.179 413.725 261.233 413.988 260.271 413.974C259.309 413.959 258.371 413.668 257.571 413.134C242.778 402.973 230.649 389.401 222.21 373.564C213.77 357.727 209.268 340.09 209.084 322.146C208.434 261.504 258.751 209.861 319.396 209.022C343.41 208.685 366.896 216.082 386.383 230.118C405.869 244.155 420.324 264.087 427.611 286.97C434.897 309.853 434.629 334.473 426.847 357.192C419.064 379.911 404.179 399.524 384.392 413.134V413.144Z"
+						/>
+						<path
+							id="logo-half"
+							d="M349.42 168.489C328.493 147.558 300.956 134.53 271.501 131.626C242.045 128.721 212.494 136.12 187.882 152.56C163.27 169.001 145.121 193.466 136.527 221.788C127.933 250.109 129.425 280.534 140.751 307.878C152.076 335.222 172.533 357.794 198.636 371.746C224.74 385.699 254.873 390.169 283.903 384.395C312.933 378.622 339.062 362.961 357.839 340.083C376.616 317.204 386.878 288.523 386.877 258.926C386.924 242.124 383.638 225.479 377.208 209.956C370.779 194.432 361.334 180.338 349.42 168.489V168.489ZM260.516 346.814C266.327 346.432 271.798 343.944 275.905 339.815C277.021 338.699 278.346 337.814 279.805 337.21C281.263 336.606 282.826 336.295 284.404 336.295C285.983 336.295 287.546 336.606 289.004 337.21C290.463 337.814 291.788 338.699 292.904 339.815C294.02 340.931 294.905 342.256 295.509 343.714C296.113 345.173 296.424 346.736 296.424 348.314C296.424 349.892 296.113 351.455 295.509 352.914C294.905 354.372 294.02 355.697 292.904 356.813V356.813C286.194 363.532 277.642 368.111 268.33 369.968C259.017 371.826 249.363 370.88 240.588 367.25C231.814 363.619 224.314 357.468 219.036 349.574C213.759 341.68 210.942 332.398 210.942 322.902C210.942 313.407 213.759 304.125 219.036 296.231C224.314 288.337 231.814 282.186 240.588 278.555C249.363 274.925 259.017 273.979 268.33 275.837C277.642 277.694 286.194 282.273 292.904 288.992C295.158 291.246 296.424 294.303 296.424 297.491C296.424 300.679 295.158 303.736 292.904 305.99C290.65 308.244 287.592 309.51 284.404 309.51C281.216 309.51 278.159 308.244 275.905 305.99V305.99C273.071 303.144 269.568 301.054 265.716 299.913C261.865 298.772 257.789 298.616 253.861 299.459C249.934 300.302 246.281 302.118 243.238 304.739C240.194 307.36 237.857 310.703 236.441 314.462C235.025 318.22 234.575 322.274 235.133 326.252C235.691 330.23 237.238 334.004 239.632 337.228C242.027 340.453 245.193 343.025 248.84 344.708C252.487 346.392 256.498 347.133 260.506 346.864L260.516 346.814ZM322.392 351.144C321.591 351.675 320.655 351.964 319.694 351.977C318.734 351.989 317.79 351.725 316.976 351.216C316.162 350.707 315.511 349.973 315.103 349.104C314.694 348.235 314.545 347.266 314.672 346.314L327.951 255.327C328.252 253.253 328.004 251.136 327.232 249.188C326.46 247.239 325.191 245.527 323.551 244.221C321.912 242.916 319.959 242.062 317.887 241.746C315.815 241.43 313.697 241.662 311.742 242.418L262.556 257.816C260.222 258.547 257.72 258.547 255.386 257.816L206.21 242.418C204.257 241.667 202.142 241.439 200.074 241.757C198.007 242.075 196.058 242.928 194.422 244.232C192.785 245.536 191.518 247.244 190.746 249.189C189.975 251.133 189.724 253.246 190.021 255.317L203.3 346.304C203.429 347.258 203.28 348.228 202.872 349.099C202.463 349.97 201.811 350.705 200.995 351.215C200.179 351.725 199.233 351.988 198.271 351.974C197.309 351.959 196.371 351.668 195.571 351.134C180.778 340.973 168.649 327.401 160.21 311.564C151.77 295.727 147.268 278.09 147.084 260.146C146.434 199.504 196.751 147.861 257.396 147.022C281.41 146.685 304.896 154.082 324.383 168.118C343.869 182.155 358.324 202.087 365.611 224.97C372.897 247.853 372.629 272.473 364.847 295.192C357.064 317.911 342.179 337.524 322.392 351.134V351.144Z"
+						/>
+					</a>
+					<defs>
+						<linearGradient
+							id="linearG"
+							x1="207.994"
+							y1="434.041"
+							x2="434.073"
+							y2="207.947"
+							gradientUnits="userSpaceOnUse"
+						>
+							<stop stop-color="#66CC99" />
+							<stop offset="1" stop-color="#33CCFF" />
+						</linearGradient>
+					</defs>
+				</svg>
+			</logo>
+			<span></span>
+			<ul class="menu">
+				<li>
+					<button onClick="location.href='./about.html'">
+						<icon>🧑</icon>
+						<span>about</span>
+					</button>
+				</li>
+				<li>
+					<button onClick="location.href='./covid.html'">
+						<icon>🦠</icon>
+						<span>covid-dashboard</span>
+					</button>
+				</li>
+				<li>
+					<button onClick="location.href='./games.html'">
+						<icon>🎱</icon>
+						<span>games</span>
+					</button>
+				</li>
+			</ul>
+		</nav>
+		<main>
+			<article>
+				<h1>About Me</h1>
+				<p>
+					Hi 👋. I’m Miguel Cardoso, a coder/designer that loves to solve
+					problems. Having an analytical eye for details is just one of the may
+					skills that I use on a daily basis. Having a background in digital
+					animation and audio-visual production gave me the ability to
+					time-manage and understand the potential that each individual gives to
+					a pice of work. Always looking for with the future brings.
+					<a
+						href="mailto:m.n.cardoso@me.com?subject=I found you on your website 😀"
+						>Let's talk</a
+					>
+				</p>
+			</article>
+			<aside>
+				<img
+					src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/me.jpg"
+					alt="me"
+				/>
+			</aside>
+		</main>
+		<footer>
+			<span>
+				Miguel Cardoso - 2022 [
+				<a
+					href="https://github.com/mncardoso"
+					target="_blank"
+					title="Open my GitHub page in a new tab"
+				>
+					GitHub
+				</a>
+				/
+				<a
+					href="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/MiguelCardoso_CV.pdf"
+					target="_blank"
+					title="Open my CV in a new tab"
+					download="MiguelCardoso_CV.pdf"
+				>
+					CV
+				</a>
+				]
+			</span>
+		</footer>
+		<div id="background">
+			<script src="./js/wave.js"></script>
+		</div>
+	</body>
 </html>
