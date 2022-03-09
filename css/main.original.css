@@ -184,6 +184,7 @@ nav span {
 }
 
 .menu button {
+	display: inline;
 	padding: 5px;
 }
 

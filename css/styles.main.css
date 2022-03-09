@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 6 version
-*/
-
 @charset "utf-8";
 
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -57,9 +50,6 @@ body {
 body {
 	display: box;
 }
-
-/* SECTION normal */
-/* MARK: text settings */
 
 span,
 p,
@@ -121,8 +111,6 @@ a:hover {
 a:active {
 	color: var(--dayColor);
 }
-
-/* SECTION main structure */
 
 .box_main {
 	padding: 20em 0 1.25em;
@@ -190,8 +178,6 @@ a:active {
 	-ms-grid-column: 17;
 }
 
-/* MARK: main window  */
-
 .box_win {
 	-ms-grid-column: 2;
 	-ms-grid-column-span: 5;
@@ -203,8 +189,6 @@ a:active {
 	border: 1px solid var(--dayColor);
 	background-color: var(--night);
 }
-
-/* MARK: window head */
 
 .win_head {
 	-ms-grid-row: 1;
@@ -275,8 +259,6 @@ a:active {
 	border: 1px solid var(--dayColor);
 }
 
-/* MARK window body */
-
 .body_cont {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -297,8 +279,6 @@ a:active {
 	align-content: center;
 }
 
-/* MARK frame */
-
 .frame_body {
 	width: 100%;
 	height: 100%;
@@ -318,8 +298,6 @@ a:active {
 	-ms-flex-pack: center;
 	justify-content: center;
 }
-
-/* MARK noise & background */
 
 #noise {
 	z-index: 10000;
@@ -344,10 +322,6 @@ a:active {
 	height: 100%;
 }
 
-/* !SECTION */
-/* SECTION  main content*/
-/* MARK logo */
-
 .logo {
 	-ms-grid-column: 7;
 	-ms-grid-column-span: 2;
@@ -358,12 +332,6 @@ a:active {
 	border: 1px solid var(--dayColor);
 	background-color: var(--night);
 }
-
-.logo img {
-	width: 100%;
-}
-
-/* MARK covid-dashboard */
 
 .covid_img_vert {
 	display: block;
@@ -379,8 +347,6 @@ a:active {
 	object-fit: contain;
 }
 
-/* MARK explorer */
-
 .explorer_img {
 	-ms-grid-column: 2;
 	grid-column: 2;
@@ -389,23 +355,17 @@ a:active {
 	object-fit: contain;
 }
 
-/* MARK casa rústica */
-
 .rustic_img {
 	width: 200px;
 	-o-object-fit: contain;
 	object-fit: contain;
 }
 
-/* MARK exponential-e */
-
 .expo_img {
 	width: 200px;
 	-o-object-fit: contain;
 	object-fit: contain;
 }
-
-/* MARK gradient */
 
 .gradient {
 	-ms-grid-column: 7;
@@ -417,8 +377,6 @@ a:active {
 	background: var(--nightGradient);
 	border: 2px solid var(--dayColor);
 }
-
-/* MARK footer */
 
 .made_by {
 	-ms-grid-column: 2;
@@ -441,22 +399,13 @@ a:active {
 	background-color: var(--night);
 }
 
-/* !SECTION */
-/* !SECTION */
-/* SECTION 1045px */
 @media screen and (max-width: 1045px) {
 }
 
-/* !SECTION */
-/* SECTION 800px */
 @media screen and (max-width: 800px) {
 }
 
-/* !SECTION */
-/* SECTION 566px */
 @media screen and (max-width: 566px) {
-	/* MARK: text settings */
-
 	h1 {
 		font-size: 2rem;
 	}
@@ -477,22 +426,16 @@ a:active {
 		font-size: 1rem;
 	}
 
-	/* SECTION main structure */
-
 	.box_main {
 		padding: 1.25em 0 1.25em;
 		-ms-grid-columns: 20px 1fr 20px;
 		grid-template-columns: 20px 1fr 20px;
 	}
 
-	/* MARK: main window  */
-
 	.box_win {
 		-ms-grid-column: 2;
 		grid-column: 2;
 	}
-
-	/* MARK: window head */
 
 	.dot {
 		display: none;
@@ -516,8 +459,6 @@ a:active {
 		display: block;
 	}
 
-	/* MARK window body */
-
 	.body_cont {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
@@ -527,10 +468,6 @@ a:active {
 		-ms-flex-align: center;
 		align-items: center;
 	}
-
-	/* !SECTION */
-	/* SECTION  main content*/
-	/* MARK logo */
 
 	.logo {
 		-ms-grid-column: 7;
@@ -547,8 +484,6 @@ a:active {
 		width: 100%;
 	}
 
-	/* MARK covid-dashboard */
-
 	.covid_img_vert {
 		display: none;
 	}
@@ -558,13 +493,9 @@ a:active {
 		width: 100%;
 	}
 
-	/* MARK gradient */
-
 	.gradient {
 		display: none;
 	}
-
-	/* MARK footer */
 
 	.made_by {
 		-ms-grid-column: 2;
@@ -581,4 +512,3 @@ a:active {
 		grid-row: 7;
 	}
 }
-/* !SECTION */
