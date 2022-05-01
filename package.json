@@ -1,9 +1,9 @@
 {
 	"name": "web_mc",
-	"version": "0.1.0",
+	"version": "4.0.0",
 	"description": "My personal website portfolio",
 	"main": "index.js",
-	"private": true,
+	"private": false,
 	"scripts": {
 		"dev": "cross-env AUTOPREFIXER_GRID=autoplace next dev",
 		"build": "cross-env AUTOPREFIXER_GRID=autoplace next build",
