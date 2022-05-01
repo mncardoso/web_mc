@@ -1,0 +1,51 @@
+{
+	"name": "web_mc",
+	"version": "0.1.0",
+	"description": "My personal website portfolio",
+	"main": "index.js",
+	"private": true,
+	"scripts": {
+		"dev": "cross-env AUTOPREFIXER_GRID=autoplace next dev",
+		"build": "cross-env AUTOPREFIXER_GRID=autoplace next build",
+		"start": "next start",
+		"lint": "next lint",
+		"export": "npm run build && next export"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mncardoso/web_mc.git"
+	},
+	"author": "Miguel Cardoso",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/mncardoso/web_mc/issues"
+	},
+	"homepage": "https://miguel-cardoso.com",
+	"dependencies": {
+		"next": "12.1.5",
+		"normalize.css": "^8.0.1",
+		"p5": "^1.4.1",
+		"react": "18.1.0",
+		"react-dom": "18.1.0",
+		"react-p5": "^1.3.28"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.5",
+		"cross-env": "^7.0.3",
+		"eslint": "8.14.0",
+		"eslint-config-next": "12.1.5"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version",
+			"last 1 ie version"
+		]
+	}
+}

@@ -1,0 +1,131 @@
+.button_outline {
+	display: block;
+	margin: 0px 0px 0px 4px;
+	padding: 0;
+	position: relative;
+	background-color: transparent;
+	border: none;
+}
+
+.button_outline::after {
+	position: absolute;
+	content: "";
+	background: transparent;
+	z-index: 1;
+	width: calc(100% - 4px);
+	height: 5px;
+	bottom: 0;
+	right: 0;
+	border-left: 0px solid var(--color-grey);
+	border-right: 0x solid var(--color-grey);
+	border-bottom: 0px solid var(--color-grey);
+}
+
+.button_outline:hover::after,
+.button_outline:focus-within::after {
+	border-left: 2px solid var(--color-grey);
+	border-right: 2px solid var(--color-grey);
+	border-bottom: 2px solid var(--color-grey);
+}
+
+.button_area {
+	display: flex;
+	padding: 5px;
+	position: relative;
+	width: auto;
+	height: auto;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	z-index: 20;
+	transition: transform 250ms ease-out;
+}
+
+.button_area > a:hover {
+	text-decoration: none;
+}
+
+.button_lable {
+	display: flex;
+	color: var(--color-text);
+	background-color: none;
+	position: relative;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	top: 0;
+	left: 0;
+	align-items: center;
+	padding: 0px 20px;
+	border: 0px solid var(--color-grey);
+	border-radius: 1px;
+	font-family: "M PLUS Rounded 1c", sans-serif;
+	font-size: 1.272rem;
+	font-weight: var(--font-bold);
+	text-decoration: none;
+	margin: none;
+	line-height: normal;
+}
+
+.button_area::before,
+.button_area::after {
+	position: absolute;
+	content: "";
+	background: transparent;
+	z-index: 20;
+	width: calc(100% - 4px);
+	height: 5px;
+	transition: transform 250ms ease-out;
+}
+
+.button_area::before {
+	top: 0;
+	left: 0;
+	border-left: 0px solid var(--color-grey);
+	border-top: 0px solid var(--color-grey);
+	border-right: 0px solid var(--color-grey);
+}
+
+.button_area::after {
+	bottom: 0;
+	right: 0;
+	border-left: 2px solid var(--color-grey);
+	border-right: 2px solid var(--color-grey);
+	border-bottom: 2px solid var(--color-grey);
+}
+
+.button_area:hover,
+.button_area:focus-within {
+	transform: translate(-6px, -5px);
+}
+
+.button_area:hover::before,
+.button_area:focus-within::before {
+	top: 0;
+	left: 0;
+	border-left: 2px solid var(--color-foreground);
+	border-top: 2px solid var(--color-foreground);
+	border-right: 2px solid var(--color-foreground);
+}
+
+.button_area:hover::after,
+.button_area:focus-within::after {
+	bottom: 0;
+	right: 0;
+	border-left: 2px solid var(--color-foreground);
+	border-right: 2px solid var(--color-foreground);
+	border-bottom: 2px solid var(--color-foreground);
+}
+
+.button_area:hover > .button_lable,
+.button_lable:focus-visible {
+	color: var(--color-text-alt);
+	background-color: var(--color-foreground);
+	outline-offset: 0px;
+	outline: -webkit-focus-ring-color none 0px;
+}
+
+.button_area:active {
+	transform: translate(0px, 0px);
+	z-index: 100;
+	transition: transform 50ms ease-out;
+}
