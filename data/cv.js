@@ -95,7 +95,7 @@ export const cv = {
 		},
 		{
 			company: "ULHT",
-			title: "Honourable mention in final project.",
+			title: "Honourable mention in final project",
 			location: "Lisbon (PT)",
 			date: "2013",
 			type: "award",
@@ -165,7 +165,7 @@ export const cv = {
 				"Adobe Premiere Pro",
 				"Adobe After Effects",
 			],
-			links: [["https://miguel-cardoso.com/casarustica", "Casa Rústica"]],
+			links: [["../other/casa_rustica", "Casa Rústica"]],
 		},
 		{
 			company: "Exponential-e",
@@ -190,7 +190,7 @@ export const cv = {
 				"Adobe After Effects",
 				"PowerPoint",
 			],
-			links: [["https://miguel-cardoso.com/exponential-e/", "work exemples"]],
+			links: [["../other/exponential-e", "work exemples"]],
 		},
 		{
 			company: "Adobe UK",
