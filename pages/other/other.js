@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../../styles/design/Other.module.css";
+import styles from "../../styles/other/Other.module.css";
 import { Button } from "../../components/interface/button";
 
 let Other = () => {
@@ -16,7 +16,7 @@ let Other = () => {
 					<div className="picture_galery">
 						<div></div>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/appleWatch.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/other/apple_watch.png"
 							alt="Apple Watch"
 							layout="raw"
 							width="272"
@@ -44,7 +44,7 @@ let Other = () => {
 						<div></div>
 						<div className={styles.face_filter}>
 							<Image
-								src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/insta.png"
+								src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/other/insta.png"
 								alt="Face Filter"
 								layout="raw"
 								width="299"
@@ -87,7 +87,7 @@ let Other = () => {
 							<path d="M29.51,25.44a9.53,9.53,0,0,1-3.12,7.45,11.91,11.91,0,0,1-8.26,2.8q-1.68,0-4.77-.15-2.94-.15-4.47-.15c-1,0-2.4,0-4.12.15s-3.25.15-4.37.15c-.27,0-.4-.23-.4-.7s.13-.65.4-.68a9.71,9.71,0,0,0,4.13-1.13c.72-.52,1.1-1.56,1.1-3.12V6.43A5,5,0,0,0,5.18,4,2.89,2.89,0,0,0,3.64,2.83,14.13,14.13,0,0,0,.4,2.17c-.27,0-.4-.25-.4-.71S.13.76.4.76c1.12,0,2.49,0,4.12.15s2.84.14,3.87.14,2.36,0,4-.14S15.6.76,16.73.76A12.07,12.07,0,0,1,24.31,3,7.1,7.1,0,0,1,27.19,8.9a6.89,6.89,0,0,1-2.12,4.78,10.38,10.38,0,0,1-5.28,2.92,14.52,14.52,0,0,1,7.08,3.25A7.24,7.24,0,0,1,29.51,25.44ZM21.62,8.9Q21.62,5.59,20,4c-1.09-1-2.78-1.55-5.07-1.55h-1c-2.11,0-3.16.9-3.16,2.71V16.1h3.62c2.54,0,4.39-.56,5.53-1.7S21.62,11.44,21.62,8.9ZM24,25.44a7.63,7.63,0,0,0-2.06-5.67,7.67,7.67,0,0,0-5.7-2.06H10.75V30.06a3.43,3.43,0,0,0,1.31,3.13,8.68,8.68,0,0,0,4.47.84,6.84,6.84,0,0,0,5.37-2.37A9.1,9.1,0,0,0,24,25.44Z" />
 						</svg>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/blissPointProduct.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/other/bliss_point_product.png"
 							alt="Bliss Popint Product"
 							layout="raw"
 							width="1080"
@@ -99,15 +99,15 @@ let Other = () => {
 					<h1>Audio Tape</h1>
 					<div className="picture_galery">
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/AudioTape.png"
-							alt="Bliss Popint Product"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/other/audio_tape.png"
+							alt="Audio Tape"
 							layout="raw"
 							width="2692"
 							height="2692"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/AudioTapePrint.jpg"
-							alt="Bliss Popint Product"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/other/audio_tape_print.jpg"
+							alt="Audio Tape Print"
 							layout="raw"
 							width="1525"
 							height="1494"
@@ -118,22 +118,22 @@ let Other = () => {
 					<h1>Watter Bottle</h1>
 					<div className="picture_galery">
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/WatterBottle.png"
-							alt="Bliss Popint Product"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/other/watter_bottle.png"
+							alt="Water Bottle"
 							layout="raw"
 							width="5000"
 							height="3334"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/WatterBottlePoster.png"
-							alt="Bliss Popint Product"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/other/watter_bottle_poster.png"
+							alt="Water Bottle Poster"
 							layout="raw"
 							width="3509"
 							height="4962"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/WatterBottleRender.png"
-							alt="Bliss Popint Product"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/other/watter_bottle_render.png"
+							alt="Water Bottle Render"
 							layout="raw"
 							width="1080"
 							height="1080"

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../../styles/design/Rustic.module.css";
+import styles from "../../styles/other/Rustic.module.css";
 
 let Rustic = () => {
 	return (
@@ -36,7 +36,7 @@ let Rustic = () => {
 					<h3>Mood board</h3>
 					<div className="margin_big"></div>
 					<Image
-						src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/moodBoard.png"
+						src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/mood_board.png"
 						alt="Mood bard"
 						layout="raw"
 						width="888"
@@ -57,7 +57,7 @@ let Rustic = () => {
 					<div className="margin_big"></div>
 					<div className={styles.logo_process}>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/process.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/process.png"
 							alt="Process"
 							layout="responsive"
 							width="1192"
@@ -69,7 +69,7 @@ let Rustic = () => {
 					<h2>Stationary</h2>
 					<div className="margin_big"></div>
 					<Image
-						src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/stationary.png"
+						src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/stationary.png"
 						alt="Process"
 						layout="raw"
 						width="1286"
@@ -86,140 +86,140 @@ let Rustic = () => {
 					<div className="margin_big"></div>
 					<div className="picture_galery">
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img001.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/001.png"
 							alt="photo 01"
 							layout="raw"
 							width="160"
 							height="106"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img002.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/002.png"
 							alt="photo 02"
 							layout="raw"
 							width="161"
 							height="109"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img003.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/003.png"
 							alt="photo 03"
 							layout="raw"
 							width="160"
 							height="105"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img004.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/004.png"
 							alt="photo 04"
 							layout="raw"
 							width="161"
 							height="107"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img005.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/005.png"
 							alt="photo 05"
 							layout="raw"
 							width="160"
 							height="106"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img006.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/006.png"
 							alt="photo 06"
 							layout="raw"
 							width="161"
 							height="106"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img007.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/007.png"
 							alt="photo 07"
 							layout="raw"
 							width="161"
 							height="109"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img008.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/008.png"
 							alt="photo 08"
 							layout="raw"
 							width="160"
 							height="107"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img009.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/009.png"
 							alt="photo 09"
 							layout="raw"
 							width="160"
 							height="108"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img010.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/010.png"
 							alt="photo 10"
 							layout="raw"
 							width="160"
 							height="108"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img011.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/011.png"
 							alt="photo 11"
 							layout="raw"
 							width="161"
 							height="106"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img012.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/012.png"
 							alt="photo 12"
 							layout="raw"
 							width="160"
 							height="105"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img013.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/013.png"
 							alt="photo 13"
 							layout="raw"
 							width="161"
 							height="108"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img014.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/014.png"
 							alt="photo 14"
 							layout="raw"
 							width="160"
 							height="107"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img015.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/015.png"
 							alt="photo 15"
 							layout="raw"
 							width="161"
 							height="106"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img016.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/016.png"
 							alt="photo 16"
 							layout="raw"
 							width="160"
 							height="108"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img017.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/017.png"
 							alt="photo 17"
 							layout="raw"
 							width="161"
 							height="108"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img018.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/018.png"
 							alt="photo 18"
 							layout="raw"
 							width="161"
 							height="106"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img019.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/019.png"
 							alt="photo 19"
 							layout="raw"
 							width="161"
 							height="109"
 						/>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/cr_img020.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/photos/020.png"
 							alt="photo 20"
 							layout="raw"
 							width="161"
@@ -232,7 +232,7 @@ let Rustic = () => {
 					<div className="margin_big"></div>
 					<div className={styles.online}>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/online.png"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/online.png"
 							alt="online"
 							layout="raw"
 							width="1056"

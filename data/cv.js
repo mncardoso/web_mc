@@ -9,7 +9,7 @@ export const cv = {
 	],
 
 	intro:
-		"Hi, I'm Miguel Cardoso, a coder/designer that loves solving problems. With an analytical eye for details, I bring growth to my employers. I love keeping up with the latest features of the technologies in my field. I can easily integrate a team, either working remotely or at the office, anywhere in the world. I'm bilingual in Portuguese and English, and I speak fairly well Spanish and French.",
+		"Hi, I'm Miguel, a front-end developer with an analytical eye for details and design. I have experience in designing, coding and testing front-end web applications in various programming languages and frameworks. I specialise in JavaScript and have professional experience working with React, Node and Next. I love solving problems and keeping up with the latest features of the technologies in my field. I can easily adapt my workflow to new frameworks, test on different platforms and integrate a team either remotely or at the office, anywhere in the world. I'm bilingual in Portuguese and English, and speak fairly well Spanish and French.",
 	skills: [
 		"html",
 		"css",
@@ -17,6 +17,8 @@ export const cv = {
 		"react-native",
 		"next.js",
 		"node.js",
+		"p5.js",
+		"d3.js",
 		"python",
 		"git",
 		"CLI",
@@ -52,7 +54,7 @@ export const cv = {
 			type: "internship",
 			description: [
 				"Made technical drawings of stands, displays and decorative cutouts for public venues, to be laser-cut and bent by an in-house machine.",
-				"Modelled 3D mockups of event structures reducing the time spent with the layout.",
+				"Modelled 3D mockups of event structures, reducing the time spent with the layout.",
 			],
 			skills: ["Adobe Photoshop", "Adobe Illustrator", "Cinema 4D"],
 		},
@@ -75,7 +77,7 @@ export const cv = {
 			date: "2010-2013",
 			type: "education",
 			description: [
-				"Learned 3d modelling, rigging and animaton.",
+				"Learned 3D modelling, rigging and animaton.",
 				"Learned how to use the software Maya, Nuke and After Effects.",
 				"Learned to capture and clean MoCap performances.",
 			],
@@ -256,6 +258,8 @@ export const cv = {
 				"react-native",
 				"next.js",
 				"node.js",
+				"p5.js",
+				"d3.js",
 				"git",
 				"CLI",
 				"figma",

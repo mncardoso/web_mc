@@ -15,7 +15,7 @@ export let Footer = () => {
 				</a>
 			</Link>
 			<p> / </p>
-			<Link href="./cv" passHref replace>
+			<Link href="../cv" passHref replace>
 				<a title="Open my CV">CV</a>
 			</Link>
 

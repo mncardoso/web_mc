@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../../styles/Design.module.css";
+import styles from "../../styles/Other.module.css";
 import { Button } from "../../components/interface/button";
 
-let Design = () => {
+let Other = () => {
 	return (
 		<div>
 			<Head>
@@ -17,7 +17,7 @@ let Design = () => {
 							Brand building, logo and presentation for a lodging business in
 							rural Portugal.{" "}
 							<Button
-								action={"./design/casa_rustica"}
+								action={"./other/casa_rustica"}
 								lable={"Read the case-study"}
 								title={"Read the case-study"}
 							/>
@@ -25,7 +25,7 @@ let Design = () => {
 					</article>
 					<aside className={styles.aside_rustic}>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/rustic.svg"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/rustic.house/rustic.svg"
 							alt="Casa Rústica Logo"
 							layout="raw"
 							width="382"
@@ -40,7 +40,7 @@ let Design = () => {
 							A selection of work done when working for one of the biggest
 							managed service providers in the United Kingdom.{" "}
 							<Button
-								action={"./design/exponential-e"}
+								action={"./other/exponential-e"}
 								lable={"Have a look"}
 								title={"Have a look"}
 							/>
@@ -48,7 +48,7 @@ let Design = () => {
 					</article>
 					<aside className={styles.aside_expo}>
 						<Image
-							src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/exponential.svg"
+							src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/exponential.e/exponential_e_logo.svg"
 							alt="Exponential-e Logo"
 							layout="raw"
 							width="382"
@@ -60,7 +60,7 @@ let Design = () => {
 					<article>
 						<h1 className="article_title">Other</h1>
 						<p>
-							<Button action={"./design/other"} lable={"Here"} title={"Here"} />{" "}
+							<Button action={"./other/other"} lable={"Here"} title={"Here"} />{" "}
 							is a selection of other design works I did. :)
 						</p>
 					</article>
@@ -70,4 +70,4 @@ let Design = () => {
 	);
 };
 
-export default Design;
+export default Other;

@@ -10,7 +10,8 @@
 	border-radius: 4px;
 	margin: 0 0.5rem;
 }
-.container img {
+.container img,
+.container svg {
 	width: 100%;
 	height: auto;
 }

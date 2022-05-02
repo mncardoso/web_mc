@@ -31,7 +31,7 @@ let About = () => {
 				</article>
 				<aside>
 					<Image
-						src="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/me.jpg"
+						src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/me.jpg"
 						alt="me"
 						layout="raw"
 						width="640"

@@ -104,11 +104,7 @@ export let Nav = () => {
 						/>
 					</li>
 					<li>
-						<ButtonHeader
-							action={"../design"}
-							lable={"design"}
-							title={"design"}
-						/>
+						<ButtonHeader action={"../other"} lable={"other"} title={"other"} />
 					</li>
 				</ul>
 			</div>

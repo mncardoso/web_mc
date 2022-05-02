@@ -38,12 +38,12 @@ function MyApp({ Component, pageProps }) {
 				<meta
 					property="og:image"
 					media="(prefers-color-scheme: light)"
-					content="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/og_light.png"
+					content="https://s3.eu-north-1.amazonaws.com/web.mc/assets/og_light.png"
 				/>
 				<meta
 					property="og:image"
 					media="(prefers-color-scheme: dark)"
-					content="https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/og_dark.png"
+					content="https://s3.eu-north-1.amazonaws.com/web.mc/assets/og_dark.png"
 				/>
 
 				{/* Favicon */}

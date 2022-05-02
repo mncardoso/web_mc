@@ -24,7 +24,7 @@ let PageCV = ({ cv }) => {
 					<div>
 						<Button
 							action={
-								"https://s3.eu-north-1.amazonaws.com/web.miguel.cardoso/assets/MiguelCardoso_CV.pdf"
+								"https://s3.eu-north-1.amazonaws.com/web.mc/assets/MiguelCardoso_CV.pdf"
 							}
 							lable={"download"}
 							newTab={true}
