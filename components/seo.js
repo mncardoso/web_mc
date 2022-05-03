@@ -47,7 +47,7 @@ export let SEO = () => {
 			/>
 
 			{/* Favicons */}
-			<link rel="icon" type="image/x-icon" href="../favicon.ico" />
+			<link rel="icon" type="image/x-icon" sizes="any" href="../favicon.ico" />
 			<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
 
 			{/* Apple Icons */}
