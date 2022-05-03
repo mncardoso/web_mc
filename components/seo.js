@@ -47,10 +47,11 @@ export let SEO = () => {
 			/>
 
 			{/* Favicons */}
-			<link rel="icon" type="image/x-icon" href={Meta.fav_icon} />
-			<link rel="icon" type="image/svg+xml" href={Meta.fav_svg} />
+			<link rel="icon" type="image/x-icon" href="../favicon.ico" />
+			<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
 
 			{/* Apple Icons */}
+			<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
 			<link rel="apple-touch-icon" sizes="180x180" href={Meta.apple_180} />
 			<link rel="apple-touch-icon" sizes="152x152" href={Meta.apple_152} />
 			<link rel="apple-touch-icon" sizes="144x144" href={Meta.apple_144} />
