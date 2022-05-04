@@ -20,14 +20,14 @@ export let Nav = () => {
 							width="368"
 							rx="184"
 							transform="rotate(-45 -67.562 192.653)"
-							stroke-width="16"
+							strokeWidth="16"
 						/>
 						<circle
 							className={styles.circle}
 							cx="321"
 							cy="321"
 							r="184"
-							stroke-width="16"
+							strokeWidth="16"
 						/>
 						<path
 							className={styles.color}
@@ -47,8 +47,8 @@ export let Nav = () => {
 								y2="207.947"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop stop-color="#66CC99" />
-								<stop offset="1" stop-color="#33CCFF" />
+								<stop stopColor="#66CC99" />
+								<stop offset="1" stopColor="#33CCFF" />
 							</linearGradient>
 						</defs>
 					</svg>
