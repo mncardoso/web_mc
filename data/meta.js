@@ -35,15 +35,15 @@ export let Meta = {
 	apple_76:
 		"https://s3.eu-north-1.amazonaws.com/web.mc/assets/favicons/apple-touch-icon-76x76.png",
 	apple_114:
-		"https://s3.eu-north-1.amazonaws.com/web.mc/assets/favicons/apple-touch-icon-114x114.png",
+		"https://s3.eu-north-1.amazonaws.com/web.mc/assets/favicons/apple-touch-icon-57x57@2x.png",
 	apple_120:
-		"https://s3.eu-north-1.amazonaws.com/web.mc/assets/favicons/apple-touch-icon-120x120.png",
+		"https://s3.eu-north-1.amazonaws.com/web.mc/assets/favicons/apple-touch-icon-60x60@2x.png",
 	apple_144:
-		"https://s3.eu-north-1.amazonaws.com/web.mc/assets/favicons/apple-touch-icon-144x144.png",
+		"https://s3.eu-north-1.amazonaws.com/web.mc/assets/favicons/apple-touch-icon-72x72@2x.png",
 	apple_152:
-		"https://s3.eu-north-1.amazonaws.com/web.mc/assets/favicons/apple-touch-icon-152x152.png",
+		"https://s3.eu-north-1.amazonaws.com/web.mc/assets/favicons/apple-touch-icon-76x76@2x.png",
 	apple_180:
-		"https://s3.eu-north-1.amazonaws.com/web.mc/assets/favicons/apple-touch-icon-180x180.png",
+		"https://s3.eu-north-1.amazonaws.com/web.mc/assets/favicons/apple-touch-icon-60x60@3x.png",
 
 	// Android Icons
 	android_36:

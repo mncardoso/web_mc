@@ -14,9 +14,11 @@
 	height: 56px;
 }
 
+.circle,
+.mark,
+.color,
 .background {
-	fill: var(--color-background);
-	stroke: var(--color-foreground);
+	transition: var(--transition);
 }
 .circle {
 	fill: var(--color-background);
@@ -25,26 +27,27 @@
 .mark {
 	fill: var(--color-background);
 }
-.full {
-	visibility: visible;
+.background {
+	fill: var(--color-background);
+	stroke: var(--color-foreground);
+	height: 550px;
 }
-.half {
-	visibility: hidden;
+.logo:hover .circle,
+.logo:focus-within .circle,
+.logo:hover .mark,
+.logo:focus-within .mark,
+.logo:hover .color,
+.logo:focus-within .color {
+	transform: translate(var(--translate), var(--translate));
 }
-.logo:hover .full,
-.logo:focus-within .full {
-	visibility: hidden;
+.logo:hover .background,
+.logo:focus-within .background {
+	height: 462px;
 }
-.logo:hover .half,
-.logo:focus-within .half {
-	visibility: visible;
-}
-
 .logo:focus-within {
 	outline-offset: 0px;
 	outline: -webkit-focus-ring-color none 0px;
 }
-
 .line {
 	grid-column: 2;
 	border-bottom: 2px solid var(--color-grey);

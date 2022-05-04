@@ -22,6 +22,10 @@
 	--font-bold: 700;
 	--font-extra-bold: 800;
 	--font-black: 900;
+
+	/* Animation */
+	--translate: -12.15%;
+	--transition: all 100ms ease-out;
 }
 
 * {
