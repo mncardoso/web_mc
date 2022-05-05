@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Covid.module.css";
+import { SEO } from "../components/seo";
 import { Button } from "../components/interface/button";
 
 let Covid = () => {
@@ -9,6 +10,7 @@ let Covid = () => {
 			<Head>
 				<title>Miguel Cardoso | Covid Dashboard</title>
 			</Head>
+			<SEO />
 			<div className="content_main">
 				<article>
 					<h1 className="article_title">Covid Dashboard</h1>

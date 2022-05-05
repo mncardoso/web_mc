@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Games.module.css";
+import { SEO } from "../components/seo";
 // import { MagicAnswers } from "../components/other/MagicAnswers";
 // import { RPS } from "../components/other/RPS";
 
@@ -10,6 +11,7 @@ let Games = () => {
 			<Head>
 				<title>Miguel Cardoso | Games</title>
 			</Head>
+			<SEO />
 			<div className="content_main">
 				<article>
 					<h1 className="article_title">Games</h1>

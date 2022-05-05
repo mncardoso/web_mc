@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Explorer.module.css";
+import { SEO } from "../components/seo";
 import { Button } from "../components/interface/button";
 
 let Explorer = () => {
@@ -8,6 +9,7 @@ let Explorer = () => {
 			<Head>
 				<title>Miguel Cardoso | Explorer App</title>
 			</Head>
+			<SEO />
 			<div className="content_main">
 				<article>
 					<h1 className="article_title">Explorer App</h1>

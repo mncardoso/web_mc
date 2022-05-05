@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import { SEO } from "../components/seo";
 import { Button } from "../components/interface/button";
 
 let About = () => {
@@ -8,6 +9,7 @@ let About = () => {
 			<Head>
 				<title>Miguel Cardoso | About Me</title>
 			</Head>
+			<SEO />
 			<div className="content_main">
 				<article>
 					<h1 className="article_title">About Me</h1>

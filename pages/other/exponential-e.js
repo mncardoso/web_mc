@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../../styles/other/Expo.module.css";
+import { SEO } from "../components/seo";
 
 let Expo = () => {
 	return (
@@ -16,6 +17,7 @@ let Expo = () => {
 					content="https://s3.eu-north-1.amazonaws.com/web.mc/assets/favicons/og_expo.png"
 				/>
 			</Head>
+			<SEO />
 			<h1 className="article_title">Exponential-e</h1>
 			<div className={styles.container}>
 				<article>

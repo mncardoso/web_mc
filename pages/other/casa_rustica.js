@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../../styles/other/Rustic.module.css";
+import { SEO } from "../components/seo";
 
 let Rustic = () => {
 	return (
@@ -16,6 +17,7 @@ let Rustic = () => {
 					content="https://s3.eu-north-1.amazonaws.com/web.mc/assets/favicons/og_rustic.png"
 				/>
 			</Head>
+			<SEO />
 			<h1 className="article_title">Casa Rústica</h1>
 			<div className={styles.container}>
 				<article>

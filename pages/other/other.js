@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../../styles/other/Other.module.css";
+import { SEO } from "../components/seo";
 import { Button } from "../../components/interface/button";
 
 let Other = () => {
@@ -9,6 +10,7 @@ let Other = () => {
 			<Head>
 				<title>Miguel Cardoso | Other Design Work</title>
 			</Head>
+			<SEO />
 			<h1 className="article_title">Other design work</h1>
 			<div className={styles.container}>
 				<article>

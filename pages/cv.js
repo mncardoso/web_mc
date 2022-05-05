@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/CV.module.css";
+import { SEO } from "../components/seo";
 import { cv } from "../data/cv";
 import { Button } from "../components/interface/button";
 import { Tag } from "../components/components/tag";
@@ -19,6 +20,7 @@ let PageCV = ({ cv }) => {
 			<Head>
 				<title>Miguel Cardoso | CV</title>
 			</Head>
+			<SEO />
 			<div className="content_main">
 				<div className={styles.container}>
 					<div>
