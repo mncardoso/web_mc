@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../../styles/other/Expo.module.css";
-import { SEO } from "../components/seo";
+import { SEO } from "../../components/seo";
 
 let Expo = () => {
 	return (

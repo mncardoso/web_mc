@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../../styles/Other.module.css";
-import { SEO } from "../components/seo";
+import { SEO } from "../../components/seo";
 import { Button } from "../../components/interface/button";
 
 let Other = () => {
