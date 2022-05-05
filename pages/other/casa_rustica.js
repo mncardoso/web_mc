@@ -7,6 +7,14 @@ let Rustic = () => {
 		<div>
 			<Head>
 				<title>Miguel Cardoso | Casa Rústica</title>
+				<meta
+					property="og:image"
+					content="https://s3.eu-north-1.amazonaws.com/web.mc/assets/favicons/og_rustic.png"
+				/>
+				<meta
+					name="twitter:image"
+					content="https://s3.eu-north-1.amazonaws.com/web.mc/assets/favicons/og_rustic.png"
+				/>
 			</Head>
 			<h1 className="article_title">Casa Rústica</h1>
 			<div className={styles.container}>

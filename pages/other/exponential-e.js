@@ -7,6 +7,14 @@ let Expo = () => {
 		<div>
 			<Head>
 				<title>Miguel Cardoso | Exponential-e</title>
+				<meta
+					property="og:image"
+					content="https://s3.eu-north-1.amazonaws.com/web.mc/assets/favicons/og_expo.png"
+				/>
+				<meta
+					name="twitter:image"
+					content="https://s3.eu-north-1.amazonaws.com/web.mc/assets/favicons/og_expo.png"
+				/>
 			</Head>
 			<h1 className="article_title">Exponential-e</h1>
 			<div className={styles.container}>
