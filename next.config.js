@@ -5,21 +5,8 @@ module.exports = {
 		loader: "akamai",
 		path: "",
 	},
-	experimental: {
-		images: {
-			layoutRaw: true,
-		},
-	},
-	module: {
-		rules: [
-			{
-				test: /\.css$/,
-				use: ["style-loader", "postcss-loader"],
-			},
-			{
-				test: /\.jsx?$/,
-				use: ["babel-loader", "astroturf/loader"],
-			},
-		],
-	},
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
 };

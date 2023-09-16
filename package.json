@@ -1,51 +1,47 @@
 {
-	"name": "web_mc",
-	"version": "4.0.0",
-	"description": "My personal website portfolio",
-	"main": "index.js",
-	"private": false,
-	"scripts": {
-		"dev": "cross-env AUTOPREFIXER_GRID=autoplace next dev",
-		"build": "cross-env AUTOPREFIXER_GRID=autoplace next build",
-		"start": "next start",
-		"lint": "next lint",
-		"export": "npm run build && next export"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/mncardoso/web_mc.git"
-	},
-	"author": "Miguel Cardoso",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/mncardoso/web_mc/issues"
-	},
-	"homepage": "https://miguel-cardoso.com",
-	"dependencies": {
-		"next": "12.1.5",
-		"normalize.css": "^8.0.1",
-		"p5": "^1.4.1",
-		"react": "18.1.0",
-		"react-dom": "18.1.0",
-		"react-p5": "^1.3.28"
-	},
-	"devDependencies": {
-		"autoprefixer": "^10.4.5",
-		"cross-env": "^7.0.3",
-		"eslint": "8.14.0",
-		"eslint-config-next": "12.1.5"
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version",
-			"last 1 ie version"
-		]
-	}
+  "name": "web_mc",
+  "version": "5.0.0",
+  "description": "My personal website portfolio",
+  "main": "index.js",
+  "private": false,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mncardoso/web_mc.git"
+  },
+  "author": "Miguel Cardoso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mncardoso/web_mc/issues"
+  },
+  "homepage": "https://miguel-cardoso.com",
+  "dependencies": {
+    "next": "^13.4.19",
+    "p5": "^1.4.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-p5": "^1.3.28",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.44.2",
+    "@types/node": "^18.16.0",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.47.0",
+    "eslint-config-next": "^13.4.19",
+    "postcss": "^8.4.27",
+    "prettier": "^3.0.0",
+    "prettier-plugin-tailwindcss": "^0.5.1",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.1.6"
+  }
 }
