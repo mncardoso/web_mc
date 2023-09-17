@@ -1,88 +1,88 @@
 .container {
-	display: grid;
-	grid-template-columns: auto;
-	grid-template-rows: auto;
-	gap: 1rem;
-	/* margin: 0 5rem; */
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  gap: 1rem;
+  /* margin: 0 5rem; */
 }
 .header {
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
-	margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 .header_title {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .header_title > h1 {
-	line-height: 0;
+  line-height: 0;
 }
 .header_title > h2 {
-	line-height: 1rem;
+  line-height: 1rem;
 }
 .header_links {
-	display: grid;
-	gap: 0.5rem;
+  display: grid;
+  gap: 0.5rem;
 }
 .header_links > * {
-	display: flex;
-	justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .intro {
-	margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .tags > * {
-	margin-right: 1rem;
-	margin-bottom: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .content {
-	display: grid;
-	grid-template-columns: auto;
-	grid-template-rows: auto;
-	gap: 0.5rem;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  gap: 0.5rem;
 }
 .content > h2 {
-	margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .content_section {
-	display: grid;
-	grid-template-columns: auto;
-	grid-template-rows: auto;
-	gap: 1rem;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  gap: 1rem;
 }
 .position {
-	display: grid;
-	grid-template-columns: auto;
-	grid-template-rows: auto;
-	gap: 0.5rem;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  gap: 0.5rem;
 }
 .position > h3 > span {
-	font-size: 1rem;
-	font-weight: var(--font-regular);
+  font-weight: var(--font-regular);
+  font-size: 1rem;
 }
 
 .element {
-	margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 .element_type {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	width: 2.5rem;
-	height: 2.5rem;
-	margin-top: -2.5rem;
-	left: -3rem;
-	top: 3rem;
-	background-color: hsl(0, 0%, 100%);
-	border-radius: 100%;
+  position: relative;
+  top: 3rem;
+  left: -3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: -2.5rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 100%;
 }
 
 .links > * {
-	margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }

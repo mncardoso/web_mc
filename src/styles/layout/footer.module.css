@@ -1,23 +1,23 @@
 .footer {
-	grid-row: 3;
-	grid-column: 1;
-	display: flex;
-	margin-top: var(--margin);
-	align-items: center;
-	justify-content: center;
-	background-color: var(--color-background-alpha);
-	padding: 4px 8px;
-	border-radius: 4px;
+  display: flex;
+  grid-row: 3;
+  grid-column: 1;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--margin);
+  padding: 4px 8px;
+  background-color: var(--color-background-alpha);
+  border-radius: 4px;
 }
 
 .footer > * {
-	font-family: "M PLUS Rounded 1c", sans-serif;
-	font-size: 0.7862rem;
-	font-weight: var(--font-regular);
-	text-decoration: none;
-	margin: none;
+  margin: none;
+  font-weight: var(--font-regular);
+  font-size: 0.7862rem;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  text-decoration: none;
 }
 
 .footer a {
-	margin: 0 0.25rem;
+  margin: 0 0.25rem;
 }

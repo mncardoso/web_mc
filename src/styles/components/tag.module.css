@@ -1,14 +1,14 @@
 .tag {
-	display: inline-flex;
-	height: 22px;
-	width: fit-content;
-	border-radius: 11px;
-	border: 1px solid var(--color-grey);
-	padding: 10px;
-	justify-content: center;
-	align-items: center;
-	font-family: "M PLUS Rounded 1c", sans-serif;
-	font-size: 0.8333rem;
-	font-weight: var(--font-medium);
-	color: var(--color-alt);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 22px;
+  padding: 10px;
+  color: var(--color-alt);
+  font-weight: var(--font-medium);
+  font-size: 0.8333rem;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  border: 1px solid var(--color-grey);
+  border-radius: 11px;
 }
