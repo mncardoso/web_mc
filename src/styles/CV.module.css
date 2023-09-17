@@ -8,8 +8,8 @@
 .header {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   margin-bottom: 1rem;
+  width: 100%;
 }
 .header_title {
   display: flex;
@@ -70,17 +70,17 @@
   margin-bottom: 1rem;
 }
 .element_type {
+  display: flex;
   position: relative;
   top: 3rem;
   left: -3rem;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  margin-top: -2.5rem;
+  border-radius: 100%;
+  background-color: hsl(0, 0%, 100%);
   width: 2.5rem;
   height: 2.5rem;
-  margin-top: -2.5rem;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 100%;
 }
 
 .links > * {

@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import Image from 'next/image';
 
-import { Button } from '../components/interface/button';
-import { SEO } from '../components/seo';
-import styles from '../styles/Covid.module.css';
+import { SEO } from '@/components/seo';
+
+import { Button } from '@/interface/button';
+import styles from '@/styles/Covid.module.css';
 
 let Covid = () => {
   return (

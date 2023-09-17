@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
-import { ButtonHeader } from '../../components/interface/buttonHeader';
-import styles from '../../styles/layout/nav.module.css';
+import { ButtonHeader } from '@/interface/buttonHeader';
+import styles from '@/styles/layout/nav.module.css';
 
 export let Nav = () => {
   return (

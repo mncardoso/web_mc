@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import styles from '../../styles/interface/buttonHeader.module.css';
+import styles from '@/styles/interface/buttonHeader.module.css';
 
 export let ButtonHeader = ({ action, lable, shorLable, title, newTab = false }) => {
   if (newTab) {

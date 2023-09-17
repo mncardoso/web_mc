@@ -1,11 +1,12 @@
 import Head from 'next/head';
-import Image from 'next/image';
 
 import { Tag } from '@/components/components/tag';
 import { Button } from '@/components/interface/button';
 import { SEO } from '@/components/seo';
-import { cv } from '@/data/cv';
+
 import styles from '@/styles/CV.module.css';
+
+import { cv } from '@/data/cv';
 
 export const getStaticProps = async () => {
   return {

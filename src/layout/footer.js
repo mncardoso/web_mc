@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import styles from '../../styles/layout/footer.module.css';
+import styles from '@/styles/layout/footer.module.css';
 
 export let Footer = () => {
   return (

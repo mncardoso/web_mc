@@ -5,8 +5,8 @@
   /* gap: 8px; */
 }
 .container > * {
-  padding: 1rem;
   border: 1px solid hsla(0, 0%, 75%, 0.75);
+  padding: 1rem;
 }
 .aside_rustic {
   display: flex;

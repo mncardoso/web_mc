@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import { Meta } from '../data/meta';
+import { Meta } from '@/data/meta';
 
 export let SEO = () => {
   return (

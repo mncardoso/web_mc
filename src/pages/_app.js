@@ -1,7 +1,9 @@
-import { Wave } from '../components/components/wave';
-import { Footer } from '../components/layout/footer';
-import { Nav } from '../components/layout/nav';
-import '../styles/globals.css';
+import { Wave } from '@/components/wave';
+
+import { Footer } from '@/layout/footer';
+import { Nav } from '@/layout/nav';
+
+import '@/styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
   return (

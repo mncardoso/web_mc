@@ -1,14 +1,14 @@
 .tag {
   display: inline-flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-grey);
+  border-radius: 11px;
+  padding: 10px;
   width: fit-content;
   height: 22px;
-  padding: 10px;
   color: var(--color-alt);
   font-weight: var(--font-medium);
   font-size: 0.8333rem;
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  border: 1px solid var(--color-grey);
-  border-radius: 11px;
 }

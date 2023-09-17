@@ -1,24 +1,24 @@
 .button_outline {
-  position: relative;
   display: block;
+  position: relative;
   margin: 0px 0px 0px 4px;
-  padding: 0;
-  background-color: transparent;
   border: none;
+  background-color: transparent;
+  padding: 0;
 }
 
 .button_outline::after {
-  content: '';
   position: absolute;
   right: 0;
   bottom: 0;
   z-index: 1;
-  width: calc(100% - 4px);
-  height: 5px;
-  background: transparent;
   border-right: 0x solid var(--color-grey);
   border-bottom: 0px solid var(--color-grey);
   border-left: 0px solid var(--color-grey);
+  background: transparent;
+  width: calc(100% - 4px);
+  height: 5px;
+  content: '';
 }
 
 .button_outline:hover::after,
@@ -29,16 +29,16 @@
 }
 
 .button_area {
+  display: flex;
   position: relative;
   z-index: 20;
-  display: flex;
+  transition: transform 250ms ease-out;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 5px;
   width: auto;
   height: auto;
-  padding: 5px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  transition: transform 250ms ease-out;
 }
 
 .button_area > a:hover {
@@ -46,35 +46,35 @@
 }
 
 .button_lable {
+  display: flex;
   position: relative;
   top: 0;
   left: 0;
-  display: flex;
   align-items: center;
   margin: none;
+  border: 0px solid var(--color-grey);
+  border-radius: 1px;
+  background-color: none;
   padding: 0px 20px;
   color: var(--color-text);
   font-weight: var(--font-bold);
   font-size: 1.272rem;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
   line-height: normal;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   letter-spacing: 2px;
-  text-transform: uppercase;
   text-decoration: none;
-  background-color: none;
-  border: 0px solid var(--color-grey);
-  border-radius: 1px;
+  text-transform: uppercase;
 }
 
 .button_area::before,
 .button_area::after {
-  content: '';
   position: absolute;
   z-index: 20;
+  transition: transform 250ms ease-out;
+  background: transparent;
   width: calc(100% - 4px);
   height: 5px;
-  background: transparent;
-  transition: transform 250ms ease-out;
+  content: '';
 }
 
 .button_area::before {
@@ -118,14 +118,14 @@
 
 .button_area:hover > .button_lable,
 .button_lable:focus-visible {
-  color: var(--color-text-alt);
-  background-color: var(--color-foreground);
   outline: -webkit-focus-ring-color none 0px;
   outline-offset: 0px;
+  background-color: var(--color-foreground);
+  color: var(--color-text-alt);
 }
 
 .button_area:active {
-  z-index: 100;
   transform: translate(0px, 0px);
+  z-index: 100;
   transition: transform 50ms ease-out;
 }

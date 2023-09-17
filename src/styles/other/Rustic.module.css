@@ -6,9 +6,9 @@
 }
 .container > * {
   margin: 0 0.5rem;
-  padding: 1rem;
   border: 2px solid hsla(0, 0%, 75%, 0.75);
   border-radius: 4px;
+  padding: 1rem;
 }
 .container img {
   width: 100%;
@@ -21,11 +21,11 @@
 }
 
 .logo_process {
-  width: 100%;
   margin-top: 1rem;
-  padding: 10px;
-  background-color: hsl(0, 0%, 100%);
   border-radius: 10px;
+  background-color: hsl(0, 0%, 100%);
+  padding: 10px;
+  width: 100%;
 }
 
 .online {

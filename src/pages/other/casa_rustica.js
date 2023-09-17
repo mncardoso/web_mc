@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
 
-import { SEO } from '../../components/seo';
-import styles from '../../styles/other/Rustic.module.css';
+import { SEO } from '@/components/seo';
+
+import styles from '@/styles/other/Rustic.module.css';
 
 let Rustic = () => {
   return (

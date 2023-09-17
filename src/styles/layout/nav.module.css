@@ -2,8 +2,8 @@
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: auto 1fr auto;
-  width: 100%;
   margin-bottom: var(--margin);
+  width: 100%;
 }
 
 .logo {
@@ -28,9 +28,9 @@
   fill: var(--color-background);
 }
 .background {
-  height: 550px;
   fill: var(--color-background);
   stroke: var(--color-foreground);
+  height: 550px;
 }
 .logo:hover .circle,
 .logo:focus-within .circle,
@@ -55,8 +55,8 @@
 
 .menu {
   grid-column: 3;
-  align-self: flex-end;
   justify-content: start;
+  align-self: flex-end;
 }
 .menu > ul > li {
   display: inline-block;

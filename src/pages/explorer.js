@@ -1,8 +1,9 @@
 import Head from 'next/head';
 
-import { Button } from '../components/interface/button';
-import { SEO } from '../components/seo';
-import styles from '../styles/Explorer.module.css';
+import { SEO } from '@/components/seo';
+
+import { Button } from '@/interface/button';
+import styles from '@/styles/Explorer.module.css';
 
 let Explorer = () => {
   return (

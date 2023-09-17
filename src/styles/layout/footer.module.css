@@ -2,12 +2,12 @@
   display: flex;
   grid-row: 3;
   grid-column: 1;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin-top: var(--margin);
-  padding: 4px 8px;
-  background-color: var(--color-background-alpha);
   border-radius: 4px;
+  background-color: var(--color-background-alpha);
+  padding: 4px 8px;
 }
 
 .footer > * {

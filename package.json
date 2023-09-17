@@ -21,6 +21,7 @@
   },
   "homepage": "https://miguel-cardoso.com",
   "dependencies": {
+    "clsx": "^2.0.0",
     "next": "^13.4.19",
     "p5": "^1.4.1",
     "react": "18.2.0",
@@ -29,7 +30,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
     "@types/eslint": "^8.44.2",
     "@types/node": "^18.16.0",
     "@types/react": "^18.2.20",
@@ -41,7 +42,7 @@
     "eslint-config-next": "^13.4.19",
     "postcss": "^8.4.27",
     "prettier": "^3.0.3",
-    "prettier-plugin-rational-order": "^1.0.3",
+    "prettier-plugin-css-order": "^2.0.0",
     "prettier-plugin-tailwindcss": "^0.5.1",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6"

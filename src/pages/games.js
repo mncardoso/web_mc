@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Image from 'next/image';
 
 import { SEO } from '@/components/seo';
+
 import styles from '@/styles/Games.module.css';
 
 // import { MagicAnswers } from "../components/other/MagicAnswers";

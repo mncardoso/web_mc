@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import { SEO } from '../components/seo';
+import { SEO } from '@/components/seo';
 
 let Error404 = () => {
   return (
