@@ -1,4 +1,4 @@
-import Wave from '@/components/wave';
+// import Wave from '@/components/wave';
 import Head from 'next/head';
 
 import React, { ReactNode } from 'react';
@@ -16,7 +16,7 @@ const WaveLayout = ({ children }: { children: ReactNode }) => {
       </Head>
       <main>
         {children}
-        <Wave />
+        {/* <Wave /> */}
       </main>
     </>
   );

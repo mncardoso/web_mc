@@ -15,7 +15,7 @@ export default function about() {
             <h1>
               Hi 👋.
               <br />
-              I'm Miguel,
+              I’m Miguel,
             </h1>
             <p>
               A Software Engineer with an analytical eye for details and design. I have experience in designing, coding
@@ -23,7 +23,7 @@ export default function about() {
               JavaScript and have professional experience working with React, Node and Next. I love solving problems and
               keeping up with the latest features of the technologies in my field. I can easily adapt my workflow to new
               frameworks, test on different platforms and integrate a team either remotely or at the office, anywhere in
-              the world. I'm bilingual in Portuguese and English, and speak fairly well Spanish and French.
+              the world. I’m bilingual in Portuguese and English, and speak fairly well Spanish and French.
             </p>
           </div>
           <div className={styles.photo}>
@@ -64,12 +64,11 @@ export default function about() {
                 D3 that show the information by country.
               </p>
               <p>
-                {
-                  '[update] -> Due to change of state from pandemic to endemic and the lack on new number edited by the majority of the world governments this project is in hiatus, but the code and website are still up.'
-                }
+                [update] -{'>'} Due to change of state from pandemic to endemic and the lack on new number edited by the
+                majority of the world governments this project is in hiatus, but the code and website are still up.
               </p>
               <p>
-                {'You can still check the project '}
+                You can still check the project{' '}
                 <MiniButton newTab href="https://covid.miguel-cardoso.com/" label="here" />
               </p>
             </div>
@@ -84,11 +83,11 @@ export default function about() {
             <div className={styles.body}>
               <p>In 2020 Adobe UK had an UX competition. Here is the wining project.</p>
               <p>
-                {'You can check the final prototype '}
+                You can check the final prototype{' '}
                 <MiniButton newTab href="https://explorer.miguel-cardoso.com/" label="here" />
               </p>
               <p>
-                {'And the case study '}
+                And the case study{' '}
                 <MiniButton newTab href="https://explorer.miguel-cardoso.com/casestudy" label="here" />
               </p>
             </div>
