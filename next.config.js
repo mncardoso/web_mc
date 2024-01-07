@@ -10,6 +10,14 @@ const config = {
   },
   images: {
     domains: ['s3.eu-north-1.amazonaws.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 's3.eu-north-1.amazonaws.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
 };
 
