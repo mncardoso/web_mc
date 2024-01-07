@@ -22,12 +22,13 @@
   },
   "homepage": "https://miguel-cardoso.com",
   "dependencies": {
+    "@p5-wrapper/next": "^1.0.2",
+    "@p5-wrapper/react": "^4.3.2",
     "@t3-oss/env-nextjs": "^0.7.1",
     "next": "^14.0.4",
     "p5": "^1.9.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-p5": "^1.4.1",
     "zod": "^3.22.4"
   },
   "devDependencies": {

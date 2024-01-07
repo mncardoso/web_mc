@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@p5-wrapper/next':
+    specifier: ^1.0.2
+    version: 1.0.2(@p5-wrapper/react@4.3.2)(next@14.0.4)(react-dom@18.2.0)(react@18.2.0)
+  '@p5-wrapper/react':
+    specifier: ^4.3.2
+    version: 4.3.2(react-dom@18.2.0)(react@18.2.0)
   '@t3-oss/env-nextjs':
     specifier: ^0.7.1
     version: 0.7.1(typescript@5.3.3)(zod@3.22.4)
@@ -20,9 +26,6 @@ dependencies:
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
-  react-p5:
-    specifier: ^1.4.1
-    version: 1.4.1(react-dom@18.2.0)(react@18.2.0)
   zod:
     specifier: ^3.22.4
     version: 3.22.4
@@ -248,6 +251,32 @@ packages:
       fastq: 1.16.0
     dev: true
 
+  /@p5-wrapper/next@1.0.2(@p5-wrapper/react@4.3.2)(next@14.0.4)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-5J2c4LeubTKSiLrfwOIBvxLu12c+ihWfI02AnztEnEn+UsBf3GU3CuOoL19+IeMopfBsN/sYA9foX0BhU9Jz2A==}
+    peerDependencies:
+      '@p5-wrapper/react': '>= 4.2.0'
+      next: '>= 12.3.4'
+      react: '>= 18.2.0'
+      react-dom: '>= 18.2.0'
+    dependencies:
+      '@p5-wrapper/react': 4.3.2(react-dom@18.2.0)(react@18.2.0)
+      next: 14.0.4(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /@p5-wrapper/react@4.3.2(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-m7MoL63grVVyu39czEi3V3tz29VM4zzd4K9MjNWZ5t7jb4itgHpw6FCiSG2JzU1SqElKgo9ny8NliavPWYYdrw==}
+    peerDependencies:
+      react: '>= 18.2.0'
+      react-dom: '>= 18.2.0'
+    dependencies:
+      microdiff: 1.3.2
+      p5: 1.9.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
   /@rushstack/eslint-patch@1.6.1:
     resolution: {integrity: sha512-UY+FGM/2jjMkzQLn8pxcHGMaVLh9aEitG3zY2CiY7XHdLiz3bZOwa6oDxNqEMv7zZkV+cj5DOdz0cQ1BP5Hjgw==}
     dev: true
@@ -309,10 +338,6 @@ packages:
     dependencies:
       undici-types: 5.26.5
     dev: true
-
-  /@types/p5@1.7.0:
-    resolution: {integrity: sha512-6AnjmW98/edgXB+pYDBx7t6QbCogIG6NUzey93JpGTZA4096C+KjSN8y0sj43QRd9XtblrAhoRXHj1pFZ2vsCg==}
-    dev: false
 
   /@types/p5@1.7.6:
     resolution: {integrity: sha512-6pLTOo0V3N5jZb5nTwjiv3lPHLK3Z/TjbhQUj8CTWXocUk1Z/f6OHTp3Pcwi1BhWnf5gqKUcyEb1gP0KIJuQgw==}
@@ -1716,6 +1741,10 @@ packages:
     engines: {node: '>= 8'}
     dev: true
 
+  /microdiff@1.3.2:
+    resolution: {integrity: sha512-pKy60S2febliZIbwdfEQKTtL5bLNxOyiRRmD400gueYl9XcHyNGxzHSlJWn9IMHwYXT0yohPYL08+bGozVk8cQ==}
+    dev: false
+
   /micromatch@4.0.5:
     resolution: {integrity: sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==}
     engines: {node: '>=8.6'}
@@ -1871,11 +1900,6 @@ packages:
       wrappy: 1.0.2
     dev: true
 
-  /opencollective-postinstall@2.0.2:
-    resolution: {integrity: sha512-pVOEP16TrAO2/fjej1IdOyupJY8KDUM1CvsaScRbw6oddvpQoOfGk4ywha0HKKVAD6RkW4x6Q+tNBwhf3Bgpuw==}
-    hasBin: true
-    dev: false
-
   /optionator@0.9.3:
     resolution: {integrity: sha512-JjCoypp+jKn1ttEFExxhetCKeJt9zhAgAve5FXHixTvFDW/5aEktX9bufBKLRRMdU7bNtpLfcGu94B3cdEJgjg==}
     engines: {node: '>= 0.8.0'}
@@ -1901,10 +1925,6 @@ packages:
     dependencies:
       p-limit: 3.1.0
     dev: true
-
-  /p5@1.7.0:
-    resolution: {integrity: sha512-qrbT/44Dwm63ZtOKX/mp61pw+5yj6ijYLOmRv7p6zcfjbo83Vb0gVFEvW0kTLFu7hceWCig0HONo9F1bSlqbsQ==}
-    dev: false
 
   /p5@1.9.0:
     resolution: {integrity: sha512-+5/hz0ZokCDf7BMMAeemE7FIo7gFZK7ImL62acHLXZwerGjqj+171bnaAWj4aCFCx6fwysAr2U7/AKuPyPhehA==}
@@ -2030,21 +2050,6 @@ packages:
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
-
-  /react-p5@1.4.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-njeL8zskkbo8gK3ql1u4/MgmecT/g7Z7LvypTn65DWUnuBvV/9S5AowcKkwQuLVo8/DDAE5vgGVFq1DOkoWiJA==}
-    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
-    requiresBuild: true
-    peerDependencies:
-      react: '>= 17.0.1'
-      react-dom: '>= 17.0.1'
-    dependencies:
-      '@types/p5': 1.7.0
-      opencollective-postinstall: 2.0.2
-      p5: 1.7.0
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: false
 
   /react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
