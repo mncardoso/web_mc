@@ -9,7 +9,6 @@ const config = {
     defaultLocale: 'en',
   },
   images: {
-    domains: ['s3.eu-north-1.amazonaws.com'],
     remotePatterns: [
       {
         protocol: 'https',
