@@ -9,20 +9,7 @@ const config = {
     defaultLocale: 'en',
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 's3.eu-north-1.amazonaws.com',
-        port: '',
-        pathname: '/web.mc/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 's3.eu-north-1.amazonaws.com',
-        port: '',
-        pathname: '/web.miguel.cardoso/**',
-      },
-    ],
+    domains: ['s3.eu-north-1.amazonaws.com'],
   },
 };
 
