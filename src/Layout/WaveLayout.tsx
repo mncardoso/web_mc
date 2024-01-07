@@ -1,7 +1,7 @@
 import Wave from '@/components/wave';
 import Head from 'next/head';
 
-import React, { ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 
 const WaveLayout = ({ children }: { children: ReactNode }) => {
   return (

@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import HeadNav from '@/components/HeadNav';
 import Footer from '@/components/Footer';
 

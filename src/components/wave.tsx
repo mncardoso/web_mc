@@ -1,23 +1,23 @@
-import p5 from 'p5';
+import type p5 from 'p5';
 import { type Sketch } from '@p5-wrapper/react';
 import { NextReactP5Wrapper } from '@p5-wrapper/next';
 
-let increment = 0.2;
-let scale = 30;
-let sculpt = 40;
-let columns: number;
-let rows: number;
-let width: number;
-let height: number;
-let canvas;
-let flying = 0;
-let terrain: (number | undefined)[][] = [];
-
 const Wave: Sketch = (p: p5) => {
+  const increment = 0.2;
+  const scale = 30;
+  const sculpt = 40;
+
+  let columns: number;
+  let rows: number;
+  let width: number;
+  let height: number;
+  let flying = 0;
+  const terrain: (number | undefined)[][] = [];
+
   p.setup = () => {
     width = window.innerWidth * 2;
     height = window.innerHeight * 0.75;
-    canvas = p.createCanvas(window.innerWidth, window.innerHeight, p.WEBGL);
+    p.createCanvas(window.innerWidth, window.innerHeight, p.WEBGL);
     p.angleMode(p.DEGREES);
     p.colorMode(p.HSL);
     columns = width / scale;
@@ -38,7 +38,7 @@ const Wave: Sketch = (p: p5) => {
       terrain[x] = [] as number[];
       let xOffset = flying;
       for (let y = 0; y < rows; y++) {
-        let drawX = terrain[x];
+        const drawX = terrain[x];
         if (!drawX) continue;
         drawX[y] = p.map(p.noise(xOffset, yOffset), 0, 1, -sculpt, sculpt);
         terrain[x] = drawX;
@@ -63,14 +63,14 @@ const Wave: Sketch = (p: p5) => {
           // p.stroke(195, 90, p.map(x, 0, columns, 0, 62));
         }
         p.strokeWeight(0.5);
-        let readX = terrain[x];
+        const readX = terrain[x];
         if (!readX) continue;
         p.vertex(x * scale, y * scale, readX[y]);
         p.vertex(x * scale, (y + 1) * scale, readX[y + 1]);
       }
       p.endShape();
     }
-    window.addEventListener('resize', p.resizeCanvas(window.innerWidth, window.innerHeight) as any);
+    window.addEventListener('resize', () => p.resizeCanvas(window.innerWidth, window.innerHeight));
   };
 };
 const Canvas = () => {

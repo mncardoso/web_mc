@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import styles from './TimeLine.module.css';
+import { type ReactNode } from 'react';
 
-const TimeLine = ({ title, image, children }: { title: string; image: string; children: React.ReactNode }) => {
+const TimeLine = ({ title, image, children }: { title: string; image: string; children: ReactNode }) => {
   return (
     <div className={`${styles.main} grid`}>
       <div className={styles.title}>
