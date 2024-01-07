@@ -27,7 +27,7 @@ export default function about() {
             </p>
           </div>
           <div className={styles.photo}>
-            <Image
+            <img
               src="https://s3.eu-north-1.amazonaws.com/web.mc/assets/me.jpg"
               alt="Miguel Cardoso"
               width={640}
