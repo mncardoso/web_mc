@@ -1,8 +1,8 @@
 <svg width="514" height="514" viewBox="0 0 514 514" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
     :root {
-      --color-foreground: #1a1a1a;
-      --color-background: #e6e6e6;
+      --color-foreground: #000;
+      --color-background: #fff;
       --translate: -12.15%;
       --transition: all 100ms ease-out;
     }
@@ -48,13 +48,13 @@
       outline: -webkit-focus-ring-color none 0px;
     }
 
-    @media (prefers-color-scheme: dark) {
+    /* @media (prefers-color-scheme: dark) {
       :root {
         color-scheme: dark;
         --color-foreground: #e6e6e6;
         --color-background: #1a1a1a;
       }
-    }
+    } */
   </style>
   <a class="logo" href="https://miguel-cardoso.com" title="home">
     <rect class="background" id="logo" x="-67.562" y="192.653" width="368" rx="184"
