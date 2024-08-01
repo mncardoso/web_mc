@@ -1,0 +1,13 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: var(--padding);
+}
+.image {
+  border-radius: var(--inner-border-radius);
+  padding: var(--padding);
+  width: fit-content;
+  max-width: 300px;
+  height: fit-content;
+  max-height: 130px;
+}

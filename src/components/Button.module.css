@@ -1,0 +1,17 @@
+.button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: var(--inner-border-radius);
+  background-color: none;
+  padding: 0 var(--menu-button-margin);
+  height: var(--menu-button-height);
+  text-wrap: nowrap;
+}
+
+.button:hover {
+  background-color: var(--color-neutral-muted);
+  color: var(--color-text);
+  text-decoration: none;
+}

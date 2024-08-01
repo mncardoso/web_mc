@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Home",
+    "url": "/"
+  },
+  {
+    "label": "Little Emperor's",
+    "url": "/little-emperors"
+  },
+  {
+    "label": "Covid Dashboard",
+    "url": "/covid"
+  },
+  {
+    "label": "Explorer App",
+    "url": "/explorer"
+  },
+  {
+    "label": "Design Works",
+    "url": "/design"
+  }
+]
