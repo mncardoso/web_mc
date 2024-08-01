@@ -1,6 +1,10 @@
 'use client';
 
-import Sketch from 'react-p5';
+import dynamic from 'next/dynamic';
+
+const Sketch = dynamic(() => import('react-p5'), {
+  ssr: false,
+});
 
 let inc = 0.2;
 let scl = 30;
@@ -75,11 +79,7 @@ export let Wave = () => {
     });
   };
 
-  return (
-    <div className="background" id="background">
-      {/* @ts-ignore */}
-      <Sketch setup={setup} draw={draw} />
-    </div>
-  );
+  /* @ts-ignore */
+  return <Sketch setup={setup} draw={draw} />;
 };
 // windowResized={windowResized}
