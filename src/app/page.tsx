@@ -11,7 +11,7 @@ export default function Home() {
         <h3>Hi there!</h3>
         <h1>I&apos;m Miguel Cardoso</h1>
         <p>
-          Software engineer with 4 years of experience in frontend and 4 years
+          Software engineer with 4 years of experience in front-end and 4 years
           as a graphic designer. I have had the privilege to work with renowned
           companies such as Nespresso, Seat, and Coca-Cola, demonstrating my
           professionalism, adaptability, and leadership skills across diverse
