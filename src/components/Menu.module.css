@@ -15,7 +15,6 @@
   border-radius: var(--border-radius);
   background-color: var(--color-background-alpha);
   padding: var(--padding);
-  height: fit-content;
   max-height: calc(100vh - (var(--padding) * 2));
   color: var(--color-primary);
 }

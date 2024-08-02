@@ -74,12 +74,12 @@ export let Wave = () => {
       }
       p5.endShape();
     }
-    window.addEventListener('resize', () => {
-      p5.resizeCanvas(window.innerWidth, window.innerHeight);
-    });
+    // ! window resizing seems to be called multiple times and breaks the canvas
+    // window.addEventListener('resize', () => {
+    //   p5.resizeCanvas(window.innerWidth, window.innerHeight);
+    // });
   };
 
   /* @ts-ignore */
   return <Sketch setup={setup} draw={draw} />;
 };
-// windowResized={windowResized}
