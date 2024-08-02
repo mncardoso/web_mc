@@ -29,7 +29,7 @@ export default function Home() {
             <Button href="mailto:m.n.cardoso@me.com">Email</Button>
           </li>
           <li>
-            <Button newTab href="https://www.linkedin.com/in/miguelncardoso/">
+            <Button newTab href="https://www.linkedin.com/in/mncardoso/">
               LinkedIn
             </Button>
           </li>
