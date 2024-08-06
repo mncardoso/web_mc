@@ -11,8 +11,8 @@ export default function Home() {
         <h1>Little Emperor&apos;s</h1>
         <p>
           Developed and built and styled an email system both for marketing and
-          transition emails. Built several key features simultaneously in tree
-          client facing product including web and mobile applications. Helped
+          transition emails. Built several key features simultaneously in three
+          client facing products including web and mobile applications. Helped
           with the onboarding of new team members and documentation of existing
           and new tools.
         </p>
