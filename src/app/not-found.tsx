@@ -1,25 +1,23 @@
-import React from 'react';
+'use client';
 
-import ButtonLink from '@/components/ButtonLink';
+import ActionBar from '@/components/ActionBar';
+import { useLocale } from '@/components/LocaleProvider';
+import PageHeader from '@/components/PageHeader';
+import PageShell from '@/components/PageShell';
 
 export default function NotFound() {
+  const { dict } = useLocale();
+  const { pages, common } = dict;
+  const copy = pages.notFound;
+
   return (
-    <>
-      <div className="top-spacer" />
-      <div className="container">
-        <h1>404 | Page not found</h1>
-        <h3>Hi there!</h3>
-        <p>
-          It seems you&apos;ve reached a page that doesn&apos;t exist.
-          <br />
-          <br />
-          <span>
-            Please check the URL or go back to{' '}
-            <ButtonLink href="/">Home</ButtonLink>
-          </span>
-        </p>
-      </div>
-      <div className="top-spacer" />
-    </>
+    <PageShell>
+      <PageHeader
+        eyebrow={copy.eyebrow}
+        title={copy.title}
+        subtitle={copy.subtitle}
+      />
+      <ActionBar actions={[{ label: common.backHome, href: '/' }]} />
+    </PageShell>
   );
 }

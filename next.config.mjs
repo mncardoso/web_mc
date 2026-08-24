@@ -2,8 +2,32 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['s3.eu-north-1.amazonaws.com'],
-    path: '/_next/image',
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 's3.eu-north-1.amazonaws.com',
+        pathname: '/web.mc/**',
+      },
+    ],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/little-emperors',
+        destination: '/work/little-emperors',
+        permanent: true,
+      },
+      {
+        source: '/covid',
+        destination: '/work/covid-dashboard',
+        permanent: true,
+      },
+      {
+        source: '/explorer',
+        destination: '/work/explorer',
+        permanent: true,
+      },
+    ];
   },
 };
 
