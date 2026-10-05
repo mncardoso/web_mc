@@ -1,23 +1,18 @@
 'use client';
 
-import { localeLabels, locales } from '@/i18n/locales';
-
 import { useLocale } from '@/components/LocaleProvider';
-import {
-  segmentedButtonState,
-  segmentedControlClass,
-} from '@/lib/ui';
+import { localeLabels, locales } from '@/i18n';
 
-export default function LanguageToggle() {
-  const { locale, setLocale } = useLocale();
+export function LanguageToggle() {
+  const { locale, setLocale, dict } = useLocale();
 
   return (
-    <div className={segmentedControlClass} role="group" aria-label="Language">
+    <div className="seg" role="group" aria-label={dict.common.language}>
       {locales.map((code) => (
         <button
           key={code}
           type="button"
-          className={segmentedButtonState(locale === code)}
+          className={locale === code ? 'seg__btn is-active' : 'seg__btn'}
           onClick={() => setLocale(code)}
           aria-pressed={locale === code}
         >

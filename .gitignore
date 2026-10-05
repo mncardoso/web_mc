@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+.pnpm-store/
 
 # testing
 /coverage
@@ -15,21 +16,30 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
+Thumbs.db
 *.pem
+.turbo
+.eslintcache
 
 # debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+*.log
 
 # local env files
+.env
 .env*.local
+!.env.example
 
-# vercel
+# vercel / netlify
 .vercel
+.netlify
 
 # typescript
 *.tsbuildinfo

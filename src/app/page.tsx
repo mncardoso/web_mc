@@ -1,5 +1,11 @@
-import HomeContent from '@/components/pages/HomeContent';
+import type { Metadata } from 'next';
 
-export default function Home() {
-  return <HomeContent />;
+import { HomeView } from '@/components/pages/HomeView';
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+};
+
+export default function HomePage() {
+  return <HomeView />;
 }

@@ -1,12 +1,10 @@
-import type { Locale } from '@/i18n/locales';
-
-import { en } from './en';
-import { ja } from './ja';
-
-export const dictionaries = { en, ja } as const;
-
-export type Dictionary = (typeof dictionaries)[Locale];
-
-export function getDictionary(locale: Locale): Dictionary {
-  return dictionaries[locale];
-}
+export type { Dictionary } from './messages';
+export { getDictionary } from './messages';
+export {
+  applyLocale,
+  localeLabels,
+  locales,
+  LOCALE_STORAGE_KEY,
+  readLocale,
+  type Locale,
+} from './locales';

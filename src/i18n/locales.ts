@@ -23,13 +23,10 @@ export function readLocale(): Locale {
     const fromDom = document.documentElement.lang;
     if (fromDom && isLocale(fromDom)) return fromDom;
   }
-
   if (typeof window !== 'undefined' && window.__LOCALE__) {
     return window.__LOCALE__;
   }
-
   if (typeof window === 'undefined') return 'en';
-
   const stored = localStorage.getItem(LOCALE_STORAGE_KEY);
   return stored && isLocale(stored) ? stored : 'en';
 }
@@ -38,7 +35,6 @@ export function applyLocale(locale: Locale) {
   if (typeof window !== 'undefined') {
     window.__LOCALE__ = locale;
   }
-
   if (typeof document !== 'undefined') {
     document.documentElement.lang = locale;
   }

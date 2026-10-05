@@ -1,32 +1,38 @@
 {
   "name": "web_mc",
-  "version": "6.0.0",
-  "private": false,
+  "version": "7.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.12.3",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
+    "@upstash/redis": "^1.38.3",
     "next": "16.2.10",
-    "p5": "1.11.3",
     "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react-dom": "^19.2.7",
+    "three": "^0.185.1"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "4.2.1",
-    "@tailwindcss/postcss": "^4.3.2",
     "@types/node": "^22",
-    "@types/p5": "1.7.6",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/three": "^0.185.4",
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
     "postcss": "8.4.38",
     "prettier": "3.3.2",
     "prettier-plugin-css-order": "2.1.2",
-    "tailwindcss": "^4.3.2",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.1.11"
   }
 }

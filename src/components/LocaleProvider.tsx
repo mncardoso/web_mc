@@ -9,13 +9,14 @@ import {
   useSyncExternalStore,
 } from 'react';
 
-import { getDictionary, type Dictionary } from '@/i18n';
 import {
   applyLocale,
+  getDictionary,
   LOCALE_STORAGE_KEY,
   readLocale,
+  type Dictionary,
   type Locale,
-} from '@/i18n/locales';
+} from '@/i18n';
 
 const LOCALE_CHANGE = 'locale-change';
 
@@ -31,7 +32,6 @@ function subscribeLocale(onChange: () => void) {
   window.addEventListener('storage', onChange);
   window.addEventListener(LOCALE_CHANGE, onChange);
   queueMicrotask(onChange);
-
   return () => {
     window.removeEventListener('storage', onChange);
     window.removeEventListener(LOCALE_CHANGE, onChange);
@@ -39,7 +39,11 @@ function subscribeLocale(onChange: () => void) {
 }
 
 export function LocaleProvider({ children }: { children: React.ReactNode }) {
-  const locale = useSyncExternalStore<Locale>(subscribeLocale, readLocale, () => 'en');
+  const locale = useSyncExternalStore<Locale>(
+    subscribeLocale,
+    readLocale,
+    () => 'en',
+  );
 
   useLayoutEffect(() => {
     window.dispatchEvent(new Event(LOCALE_CHANGE));
@@ -52,13 +56,14 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const dict = useMemo(() => getDictionary(locale), [locale]);
-
   const value = useMemo(
     () => ({ locale, dict, setLocale }),
     [locale, dict, setLocale],
   );
 
-  return <LocaleContext.Provider value={value}>{children}</LocaleContext.Provider>;
+  return (
+    <LocaleContext.Provider value={value}>{children}</LocaleContext.Provider>
+  );
 }
 
 export function useLocale() {

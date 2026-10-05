@@ -12,8 +12,8 @@ import {
 import {
   applyTheme,
   readTheme,
-  type Theme,
   THEME_STORAGE_KEY,
+  type Theme,
 } from '@/lib/theme';
 
 const THEME_CHANGE = 'theme-change';
@@ -27,22 +27,23 @@ const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 function subscribeTheme(onChange: () => void) {
   const media = window.matchMedia('(prefers-color-scheme: dark)');
-  const onMediaChange = () => onChange();
-
-  media.addEventListener('change', onMediaChange);
+  media.addEventListener('change', onChange);
   window.addEventListener('storage', onChange);
   window.addEventListener(THEME_CHANGE, onChange);
   queueMicrotask(onChange);
-
   return () => {
-    media.removeEventListener('change', onMediaChange);
+    media.removeEventListener('change', onChange);
     window.removeEventListener('storage', onChange);
     window.removeEventListener(THEME_CHANGE, onChange);
   };
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const theme = useSyncExternalStore<Theme>(subscribeTheme, readTheme, () => 'light');
+  const theme = useSyncExternalStore<Theme>(
+    subscribeTheme,
+    readTheme,
+    () => 'dark',
+  );
 
   useLayoutEffect(() => {
     window.dispatchEvent(new Event(THEME_CHANGE));
@@ -56,7 +57,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   const value = useMemo(() => ({ theme, setTheme }), [theme, setTheme]);
 
-  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
+  return (
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
 }
 
 export function useTheme() {

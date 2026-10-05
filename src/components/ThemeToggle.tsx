@@ -1,24 +1,28 @@
 'use client';
 
 import { useTheme } from '@/components/ThemeProvider';
-import {
-  segmentedButtonState,
-  segmentedControlClass,
-} from '@/lib/ui';
+import { useLocale } from '@/components/LocaleProvider';
 
 function SunIcon() {
   return (
-    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden className="shrink-0">
-      <circle cx="12" cy="12" r="4.25" fill="none" stroke="currentColor" strokeWidth="1.75" />
+    <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+      <circle
+        cx="12"
+        cy="12"
+        r="4"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.75"
+      />
       <g stroke="currentColor" strokeWidth="1.75" strokeLinecap="round">
-        <line x1="12" y1="2.5" x2="12" y2="5.5" />
-        <line x1="12" y1="18.5" x2="12" y2="21.5" />
-        <line x1="2.5" y1="12" x2="5.5" y2="12" />
-        <line x1="18.5" y1="12" x2="21.5" y2="12" />
-        <line x1="4.6" y1="4.6" x2="6.7" y2="6.7" />
-        <line x1="17.3" y1="17.3" x2="19.4" y2="19.4" />
-        <line x1="4.6" y1="19.4" x2="6.7" y2="17.3" />
-        <line x1="17.3" y1="6.7" x2="19.4" y2="4.6" />
+        <line x1="12" y1="2.75" x2="12" y2="5.25" />
+        <line x1="12" y1="18.75" x2="12" y2="21.25" />
+        <line x1="2.75" y1="12" x2="5.25" y2="12" />
+        <line x1="18.75" y1="12" x2="21.25" y2="12" />
+        <line x1="4.8" y1="4.8" x2="6.6" y2="6.6" />
+        <line x1="17.4" y1="17.4" x2="19.2" y2="19.2" />
+        <line x1="4.8" y1="19.2" x2="6.6" y2="17.4" />
+        <line x1="17.4" y1="6.6" x2="19.2" y2="4.8" />
       </g>
     </svg>
   );
@@ -26,7 +30,7 @@ function SunIcon() {
 
 function MoonIcon() {
   return (
-    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden className="shrink-0">
+    <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
       <path
         fill="none"
         stroke="currentColor"
@@ -39,28 +43,29 @@ function MoonIcon() {
   );
 }
 
-export default function ThemeToggle() {
+export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
+  const { dict } = useLocale();
 
   return (
-    <div className={segmentedControlClass} role="group" aria-label="Theme">
+    <div className="seg" role="group" aria-label={dict.common.theme}>
       <button
         type="button"
-        className={segmentedButtonState(theme === 'light')}
+        className={theme === 'light' ? 'seg__btn is-active' : 'seg__btn'}
         onClick={() => setTheme('light')}
         aria-pressed={theme === 'light'}
-        aria-label="Light mode"
-        title="Light mode"
+        aria-label={dict.common.themeLight}
+        title={dict.common.themeLight}
       >
         <SunIcon />
       </button>
       <button
         type="button"
-        className={segmentedButtonState(theme === 'dark')}
+        className={theme === 'dark' ? 'seg__btn is-active' : 'seg__btn'}
         onClick={() => setTheme('dark')}
         aria-pressed={theme === 'dark'}
-        aria-label="Dark mode"
-        title="Dark mode"
+        aria-label={dict.common.themeDark}
+        title={dict.common.themeDark}
       >
         <MoonIcon />
       </button>
