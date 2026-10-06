@@ -3,6 +3,8 @@ import { createRedisPresenceStore } from './redisStore';
 
 export { createMemoryPresenceStore, type PresenceStore } from './shared';
 
+export type PresenceBackend = 'redis' | 'memory';
+
 function hasUpstashEnv() {
   return Boolean(
     process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN,
@@ -18,6 +20,7 @@ function shouldUseRedis() {
 
 const globalForPresence = globalThis as typeof globalThis & {
   __presenceStore?: PresenceStore;
+  __presenceBackend?: PresenceBackend;
 };
 
 export function createPresenceStore(): PresenceStore {
@@ -27,8 +30,19 @@ export function createPresenceStore(): PresenceStore {
   return createMemoryPresenceStore();
 }
 
+export function getPresenceBackend(): PresenceBackend {
+  return shouldUseRedis() ? 'redis' : 'memory';
+}
+
 export function getPresenceStore(): PresenceStore {
   if (!globalForPresence.__presenceStore) {
+    const backend = getPresenceBackend();
+    if (backend === 'memory' && process.env.NODE_ENV === 'production') {
+      console.error(
+        '[presence] UPSTASH_REDIS_REST_URL/TOKEN missing — peers cannot sync across Netlify isolates',
+      );
+    }
+    globalForPresence.__presenceBackend = backend;
     globalForPresence.__presenceStore = createPresenceStore();
   }
   return globalForPresence.__presenceStore;

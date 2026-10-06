@@ -8,13 +8,26 @@ function createFakeRedis() {
 
   return {
     hash,
-    hset: vi.fn(async (_key: string, fields: Record<string, string>) => {
+    hset: vi.fn(async (_key: string, fields: Record<string, unknown>) => {
       for (const [id, value] of Object.entries(fields)) {
-        hash.set(id, value);
+        hash.set(
+          id,
+          typeof value === 'string' ? value : JSON.stringify(value),
+        );
       }
       return hash.size;
     }),
-    hgetall: vi.fn(async () => Object.fromEntries(hash)),
+    hgetall: vi.fn(async () => {
+      const out: Record<string, unknown> = {};
+      for (const [id, value] of hash) {
+        try {
+          out[id] = JSON.parse(value) as unknown;
+        } catch {
+          out[id] = value;
+        }
+      }
+      return out;
+    }),
     hdel: vi.fn(async (_key: string, ...ids: string[]) => {
       for (const id of ids) hash.delete(id);
       return ids.length;

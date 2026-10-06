@@ -85,10 +85,8 @@ export function createRedisPresenceStore(
       if (!peer) return;
 
       const payload: PeerPayload = { x: peer.x, y: peer.y, t: peer.t };
-      await redis.hset(HASH_KEY, {
-        [peer.id]: JSON.stringify(payload),
-      });
-    },
+      // Pass object — Upstash JSON-encodes once (avoid double-stringify).
+      await redis.hset(HASH_KEY, { [peer.id]: payload });    },
 
     async snapshot(excludeId, now = Date.now()) {
       const entries =

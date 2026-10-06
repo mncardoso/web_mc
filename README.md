@@ -74,13 +74,13 @@ pnpm build
 
 Local `pnpm dev` always uses memory (even if Upstash keys are in `.env`).
 
-Production needs Upstash Redis on the Netlify site:
+Production **must** have Upstash on the Netlify site or multi-visitor minimap cannot sync (each function isolate has its own Map — you only see yourself):
 
 1. Free Redis at [Upstash](https://console.upstash.com)
-2. Set on the host only:
+2. Netlify → Site configuration → Environment variables (Functions / production):
    - `UPSTASH_REDIS_REST_URL`
    - `UPSTASH_REDIS_REST_TOKEN`
-3. Redeploy
+3. Redeploy, then confirm `GET /api/presence` returns header `X-Presence-Backend: redis`
 
 Optional: `PRESENCE_REDIS=1` to force Redis while developing.
 

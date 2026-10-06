@@ -2,25 +2,39 @@ import { NextResponse } from 'next/server';
 
 import type { PresenceUpdate } from '@/features/presence/types';
 import { allowRequest } from '@/server/presence/rateLimit';
-import { getPresenceStore } from '@/server/presence/store';
+import {
+  getPresenceBackend,
+  getPresenceStore,
+} from '@/server/presence/store';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 const WINDOW_MS = 1_000;
-const POST_LIMIT = 12;
-const GET_LIMIT = 8;
+/** Per session — clients publish ~4/s; keep headroom without shared-IP collapse. */
+const POST_PER_ID = 10;
+/** Coarse IP cap against spam (Netlify / offices share one IP). */
+const POST_PER_IP = 120;
+const GET_PER_IP = 60;
 
 function clientKey(request: Request): string {
+  const nf = request.headers.get('x-nf-client-connection-ip');
+  if (nf) return nf.trim();
   const forwarded = request.headers.get('x-forwarded-for');
   if (forwarded) return forwarded.split(',')[0]?.trim() || 'unknown';
   return request.headers.get('x-real-ip') ?? 'unknown';
 }
 
-function rateLimited(request: Request, limit: number) {
-  const key = `${request.method}:${clientKey(request)}`;
+function rateLimited(key: string, limit: number) {
   if (allowRequest(key, limit, WINDOW_MS)) return null;
   return NextResponse.json({ error: 'rate_limited' }, { status: 429 });
+}
+
+function presenceHeaders(): HeadersInit {
+  return {
+    'Cache-Control': 'no-store',
+    'X-Presence-Backend': getPresenceBackend(),
+  };
 }
 
 function parseUpdate(body: unknown): PresenceUpdate | null {
@@ -34,8 +48,8 @@ function parseUpdate(body: unknown): PresenceUpdate | null {
 
 /** POST: publish cursor. GET: snapshot (?exclude=sessionId). */
 export async function POST(request: Request) {
-  const limited = rateLimited(request, POST_LIMIT);
-  if (limited) return limited;
+  const ipBlock = rateLimited(`POST:ip:${clientKey(request)}`, POST_PER_IP);
+  if (ipBlock) return ipBlock;
 
   let body: unknown;
   try {
@@ -49,19 +63,37 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'invalid_body' }, { status: 400 });
   }
 
-  await getPresenceStore().upsert(update);
-  return NextResponse.json({ ok: true });
+  const idBlock = rateLimited(`POST:id:${update.id}`, POST_PER_ID);
+  if (idBlock) return idBlock;
+
+  try {
+    await getPresenceStore().upsert(update);
+  } catch (error) {
+    console.error('[presence] upsert failed', error);
+    return NextResponse.json(
+      { error: 'store_unavailable' },
+      { status: 503, headers: presenceHeaders() },
+    );
+  }
+
+  return NextResponse.json({ ok: true }, { headers: presenceHeaders() });
 }
 
 export async function GET(request: Request) {
-  const limited = rateLimited(request, GET_LIMIT);
+  const limited = rateLimited(`GET:ip:${clientKey(request)}`, GET_PER_IP);
   if (limited) return limited;
 
   const { searchParams } = new URL(request.url);
   const exclude = searchParams.get('exclude') ?? undefined;
-  const snapshot = await getPresenceStore().snapshot(exclude);
 
-  return NextResponse.json(snapshot, {
-    headers: { 'Cache-Control': 'no-store' },
-  });
+  try {
+    const snapshot = await getPresenceStore().snapshot(exclude);
+    return NextResponse.json(snapshot, { headers: presenceHeaders() });
+  } catch (error) {
+    console.error('[presence] snapshot failed', error);
+    return NextResponse.json(
+      { error: 'store_unavailable' },
+      { status: 503, headers: presenceHeaders() },
+    );
+  }
 }
