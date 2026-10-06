@@ -80,7 +80,8 @@ Production **must** have Upstash on the Netlify site or multi-visitor minimap ca
 2. Netlify → Site configuration → Environment variables (Functions / production):
    - `UPSTASH_REDIS_REST_URL`
    - `UPSTASH_REDIS_REST_TOKEN`
-3. Redeploy, then confirm `GET /api/presence` returns header `X-Presence-Backend: redis`
+3. Redeploy, then confirm `GET /api/presence` returns **200** with header `X-Presence-Backend: redis`  
+   If you see `503` + `{"error":"store_unavailable","reason":"redis_auth"}`, Netlify’s URL/token don’t match Upstash — re-copy both (no quotes), save, redeploy.
 
 Optional: `PRESENCE_REDIS=1` to force Redis while developing.
 

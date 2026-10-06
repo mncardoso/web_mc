@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 
 import type { PresenceUpdate } from '@/features/presence/types';
 import { allowRequest } from '@/server/presence/rateLimit';
+import { classifyPresenceStoreError } from '@/server/presence/redisStore';
 import {
   getPresenceBackend,
   getPresenceStore,
@@ -37,6 +38,15 @@ function presenceHeaders(): HeadersInit {
   };
 }
 
+function storeUnavailable(error: unknown) {
+  const reason = classifyPresenceStoreError(error);
+  console.error('[presence] store failed', reason, error);
+  return NextResponse.json(
+    { error: 'store_unavailable', reason },
+    { status: 503, headers: presenceHeaders() },
+  );
+}
+
 function parseUpdate(body: unknown): PresenceUpdate | null {
   if (!body || typeof body !== 'object') return null;
   const { id, x, y } = body as Record<string, unknown>;
@@ -69,11 +79,7 @@ export async function POST(request: Request) {
   try {
     await getPresenceStore().upsert(update);
   } catch (error) {
-    console.error('[presence] upsert failed', error);
-    return NextResponse.json(
-      { error: 'store_unavailable' },
-      { status: 503, headers: presenceHeaders() },
-    );
+    return storeUnavailable(error);
   }
 
   return NextResponse.json({ ok: true }, { headers: presenceHeaders() });
@@ -90,10 +96,6 @@ export async function GET(request: Request) {
     const snapshot = await getPresenceStore().snapshot(exclude);
     return NextResponse.json(snapshot, { headers: presenceHeaders() });
   } catch (error) {
-    console.error('[presence] snapshot failed', error);
-    return NextResponse.json(
-      { error: 'store_unavailable' },
-      { status: 503, headers: presenceHeaders() },
-    );
+    return storeUnavailable(error);
   }
 }

@@ -18,6 +18,31 @@ type PeerPayload = {
   t: number;
 };
 
+/** Trim — Netlify UI / .env often wrap values in quotes or trailing newlines. */
+export function createUpstashRedisFromEnv(): Redis {
+  const url = process.env.UPSTASH_REDIS_REST_URL?.trim().replace(/^["']|["']$/g, '');
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN?.trim().replace(
+    /^["']|["']$/g,
+    '',
+  );
+  if (!url || !token) {
+    throw new Error('upstash_env_missing');
+  }
+  return new Redis({ url, token });
+}
+
+export function classifyPresenceStoreError(error: unknown): string {
+  const msg = error instanceof Error ? error.message : String(error);
+  if (/upstash_env_missing/i.test(msg)) return 'redis_env';
+  if (/unauthoriz|forbidden|401|403|invalid token|WRONGPASS/i.test(msg)) {
+    return 'redis_auth';
+  }
+  if (/ENOTFOUND|ECONNREFUSED|ETIMEDOUT|fetch failed|network|DNS/i.test(msg)) {
+    return 'redis_network';
+  }
+  return 'redis_error';
+}
+
 function parsePeer(id: string, raw: unknown): InternalPeer | null {
   if (raw == null) return null;
 
@@ -50,7 +75,7 @@ function parsePeer(id: string, raw: unknown): InternalPeer | null {
  */
 export function createRedisPresenceStore(
   config: PresenceConfig = PRESENCE_CONFIG,
-  redis = Redis.fromEnv(),
+  redis: Redis = createUpstashRedisFromEnv(),
 ): PresenceStore {
   const pruneStale = async (
     entries: Record<string, unknown>,
@@ -85,8 +110,9 @@ export function createRedisPresenceStore(
       if (!peer) return;
 
       const payload: PeerPayload = { x: peer.x, y: peer.y, t: peer.t };
-      // Pass object — Upstash JSON-encodes once (avoid double-stringify).
-      await redis.hset(HASH_KEY, { [peer.id]: payload });    },
+      // Object form — Upstash JSON-encodes once.
+      await redis.hset(HASH_KEY, { [peer.id]: payload });
+    },
 
     async snapshot(excludeId, now = Date.now()) {
       const entries =

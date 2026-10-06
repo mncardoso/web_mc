@@ -6,9 +6,15 @@ export { createMemoryPresenceStore, type PresenceStore } from './shared';
 export type PresenceBackend = 'redis' | 'memory';
 
 function hasUpstashEnv() {
-  return Boolean(
-    process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN,
+  const url = process.env.UPSTASH_REDIS_REST_URL?.trim().replace(
+    /^["']|["']$/g,
+    '',
   );
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN?.trim().replace(
+    /^["']|["']$/g,
+    '',
+  );
+  return Boolean(url && token);
 }
 
 /** Redis only in production (or PRESENCE_REDIS=1) so local/dev does not burn Upstash quota. */
