@@ -886,6 +886,10 @@ a {
   border-bottom: 1px solid var(--line);
 }
 
+.project-card__media .media-ph__img {
+  object-position: center;
+}
+
 .project-card__body {
   display: flex;
   flex: 1;
