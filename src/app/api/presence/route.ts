@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 import type { PresenceUpdate } from '@/features/presence/types';
 import { allowRequest } from '@/server/presence/rateLimit';
-import { classifyPresenceStoreError } from '@/server/presence/redisStore';
+import { classifyPresenceStoreError, presenceErrorDetail } from '@/server/presence/redisStore';
 import {
   getPresenceBackend,
   getPresenceStore,
@@ -40,9 +40,10 @@ function presenceHeaders(): HeadersInit {
 
 function storeUnavailable(error: unknown) {
   const reason = classifyPresenceStoreError(error);
-  console.error('[presence] store failed', reason, error);
+  const detail = presenceErrorDetail(error);
+  console.error('[presence] store failed', reason, detail);
   return NextResponse.json(
-    { error: 'store_unavailable', reason },
+    { error: 'store_unavailable', reason, detail },
     { status: 503, headers: presenceHeaders() },
   );
 }

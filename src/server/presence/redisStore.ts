@@ -28,19 +28,59 @@ export function createUpstashRedisFromEnv(): Redis {
   if (!url || !token) {
     throw new Error('upstash_env_missing');
   }
+  if (!/^https:\/\//i.test(url)) {
+    throw new Error(
+      'upstash_url_invalid: REST URL must start with https:// (not rediss://)',
+    );
+  }
   return new Redis({ url, token });
 }
 
 export function classifyPresenceStoreError(error: unknown): string {
   const msg = error instanceof Error ? error.message : String(error);
-  if (/upstash_env_missing/i.test(msg)) return 'redis_env';
-  if (/unauthoriz|forbidden|401|403|invalid token|WRONGPASS/i.test(msg)) {
+  const cause =
+    error instanceof Error && error.cause instanceof Error
+      ? error.cause.message
+      : error instanceof Error && error.cause
+        ? String(error.cause)
+        : '';
+  const text = `${msg} ${cause}`;
+
+  if (/upstash_env_missing/i.test(text)) return 'redis_env';
+  if (/upstash_url_invalid|invalid URL|starting with https/i.test(text)) {
+    return 'redis_url';
+  }
+  if (/unauthoriz|forbidden|401|403|invalid token|WRONGPASS/i.test(text)) {
     return 'redis_auth';
   }
-  if (/ENOTFOUND|ECONNREFUSED|ETIMEDOUT|fetch failed|network|DNS/i.test(msg)) {
+  if (/ENOTFOUND|ECONNREFUSED|ETIMEDOUT|fetch failed|network|DNS/i.test(text)) {
     return 'redis_network';
   }
   return 'redis_error';
+}
+
+/** Safe snippet for ops — never includes token. */
+export function presenceErrorDetail(error: unknown): string {
+  const msg = error instanceof Error ? error.message : String(error);
+  const cause =
+    error instanceof Error && error.cause instanceof Error
+      ? error.cause.message
+      : '';
+  const host = (() => {
+    try {
+      const raw = process.env.UPSTASH_REDIS_REST_URL?.trim().replace(
+        /^["']|["']$/g,
+        '',
+      );
+      return raw ? new URL(raw).host : '';
+    } catch {
+      return 'unparseable-url';
+    }
+  })();
+  return [host && `host=${host}`, msg, cause && `cause=${cause}`]
+    .filter(Boolean)
+    .join(' | ')
+    .slice(0, 240);
 }
 
 function parsePeer(id: string, raw: unknown): InternalPeer | null {
